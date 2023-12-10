@@ -30,8 +30,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['saborasturiano.herokuapp.com',
-                 '8000-hugh1996-sabor-asturiano-p6ggop7436.us2.codeanyapp.com', 'localhost']
+ALLOWED_HOSTS = ['sabor-asturiano-cd988cf2702b.herokuapp.com',
+                 '8000-hugh1996-sabor-asturiano-p6ggop7436.us2.codeanyapp.com']
 
 
 # Application definition
