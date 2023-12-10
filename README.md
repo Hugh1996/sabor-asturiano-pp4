@@ -1,39 +1,100 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Table of Contents
 
-Welcome,
+# Project Background
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# Features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Process
 
-## Codeanywhere Reminders
+## Research
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Development
 
-`python3 -m http.server`
+### User Stories
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Data Models
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+# Testing
 
-`http_server`
+## Automatic Testing
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Manual Testing
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Overview
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### General Testing
 
-To log into the Heroku toolbelt CLI:
+### Lighthouse Testing
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Responsiveness Testing
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Code Validation
 
----
+# Bugs
 
-Happy coding!
+# Deployment
+
+## Heroku Deployment
+
+- Heroku App Creation
+
+  - Log in to the Heroku dashboard.
+  - Create a new app from the dashboard.
+
+- Connect GitHub Repository
+
+  - In the Heroku app dashboard, navigate to the Deploy tab.
+  - Connect your GitHub repository to the Heroku app.
+
+- Set Environment Variables
+
+  - In the Settings tab, locate the Config Vars section.
+  - Add the following environment variables:
+    - DJANGO_SECRET_KEY: Your Django project secret key.
+    - DATABASE_URL: Your database connection URL.
+    - Add any other necessary environment variables.
+
+- Enable Automatic Deploys
+
+  - In the Deploy tab, enable automatic deploys from your GitHub repository.
+
+- Deploy the App
+
+  - Manually deploy the app for the first time by clicking the "Deploy Branch" button in the Deploy tab.
+
+- Open the App
+
+  - Once the deployment is successful, click the "Open App" button to view your deployed app.
+
+# Techologies Used
+
+This section outlines the various technologies used throughout the project and the purpose each serves.
+
+## Core Development Technologies
+
+- Django - used as a full-stack framwork for developing the app.
+- HTML/CSS + Django Template Language used for building out site pages.
+
+## Libraries, Frameworks and Packages
+
+## Python/Django Packages
+
+- Gunicorn - provides HTTP server.
+- psycopg2 - provides PostgreSQL connection.
+
+## Infrastructural Technologies
+
+- PostgreSQL (via ElephantSQL) - used for database.
+- Heroku - used for hosting the application.
+- Cloudinary - used for storing and media files.
+- Git - as a version control system.
+
+# Credits
+
+## Content
+
+-
+
+## Media
+
+-
