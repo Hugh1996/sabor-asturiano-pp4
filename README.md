@@ -1,14 +1,30 @@
+SaborAsturiano is a website dedicated to Asturian cuisine, offering a mix of traditional and modern recipes. The project exists to celebrate and preserve the culinary heritage of Asturias, promoting local ingredients and seasonal content. 
+
+It caters to a community of Asturian food enthusiasts, providing a platform for exploration, comments, and contributions. The website's purpose is to bring together individuals passionate about Asturian flavors, fostering a sense of community and sharing among those interested in the region's diverse culinary traditions.
+
+![Am I Responsive?]()
+
 # Table of Contents
 
 # Project Background
 
 # Features
 
-## Process
+## Existing Features
+
+## Features Left to Implement
+
+# Process
 
 ## Research
 
 ## Development
+
+- The development process was carried out using an Agile methodology with a focus on iterative development and continuous improvement.
+- The project was managed using a GitHub Project board with user stories and tasks.
+- User Stories were prioritised based on the MoSCoW method (Must have, Should have, Could have, Won't have).
+
+[Link to the GitHub Project board](https://github.com/users/Hugh1996/projects/3)
 
 ### User Stories
 
