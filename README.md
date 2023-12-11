@@ -1,4 +1,6 @@
-SaborAsturiano is a website dedicated to Asturian cuisine, offering a mix of traditional and modern recipes. The project exists to celebrate and preserve the culinary heritage of Asturias, promoting local ingredients and seasonal content. 
+# SaborAsturiano
+
+SaborAsturiano (AsturianTastes) is a website dedicated to Asturian cuisine, offering a mix of traditional and modern recipes. The project exists to celebrate and preserve the culinary heritage of Asturias, promoting local ingredients and seasonal content.
 
 It caters to a community of Asturian food enthusiasts, providing a platform for exploration, comments, and contributions. The website's purpose is to bring together individuals passionate about Asturian flavors, fostering a sense of community and sharing among those interested in the region's diverse culinary traditions.
 
