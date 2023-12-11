@@ -28,7 +28,25 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 ### User Stories
 
+1. As an admin, I want the capability to create, read, update, and delete content to effectively manage the platform.
+2. As an admin, I want the ability to create draft content so that I can start the writing process and complete it later.
+3. As an admin, I want to approve or disapprove comments to filter out objectionable content and maintain a positive community environment.
+4. As a user, I want to easily view a list of items so that I can select one to explore further.
+5. As a user, I want the ability to click on an item to access and read its full details.
+6. As a user or Admin, I want to be able to view the number of likes on each item to identify popular content on the platform.
+7. As a user or Admin, I want to be able to view comments on individual posts to read and engage with interactions from other users.
+8. As a user, I want to register an account so that I can comment on posts and express my likes.
+9. As a user, I want to leave comments on content to further interact with the community and share my thoughts.
+10. As a user, I want to be able to like or unlike a post to interact with the content and show my appreciation.
+11. As a user, I want the capability to add my own content to share with the community.
+12. As an admin, I want to approve or disapprove content submissions to filter out unsuitable items from being published on the platform.
+13. As a user, I want to receive feedback on the status of my content submission so that I am informed about the progress of my contribution.
+14. As a user, I want to create and customize my profile with personal details and a profile picture to enhance my presence on the platform.
+15. As a user, I want to curate a list of my favorite items for quick access, ensuring that I can easily find and revisit content I love.
+
 ## Data Models
+
+![DrawSQL]()
 
 # Testing
 
@@ -90,8 +108,6 @@ This section outlines the various technologies used throughout the project and t
 
 - Django - used as a full-stack framwork for developing the app.
 - HTML/CSS + Django Template Language used for building out site pages.
-
-## Libraries, Frameworks and Packages
 
 ## Python/Django Packages
 
