@@ -11,11 +11,10 @@ class Recipe(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name="blog_post")
     updated_on = models.DateTimeField(auto_now=True)
-    description = models.TextField()
+    excerpt = models.TextField()
     ingredients = models.TextField()
     instructions = models.TextField()
     featured_image = CloudinaryField("image", default="placeholder")
-    excerpt = models.TextField()
     created_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name="blog_likes")
