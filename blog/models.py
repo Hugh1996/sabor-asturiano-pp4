@@ -17,7 +17,7 @@ class Recipe(models.Model):
     featured_image = CloudinaryField("image", default="placeholder")
     created_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name="blog_likes")
+    likes = models.ManyToManyField(User, related_name="blog_likes", blank=True)
     favourites = models.ManyToManyField(User, related_name="favourite")
 
     class Meta:
