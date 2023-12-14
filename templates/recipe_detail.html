@@ -3,16 +3,16 @@
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
+            <div class="col-md-4 masthead-text">
                 <h1 class="post-title">{{ recipe.title }}
                 </h1>
                 <p class="post-subtitle"> {{ recipe.author }} | {{ recipe.created_on }} </p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="col-md-8 masthead-image">
                 {% if "placeholder" in recipe.featured_image.url %}
-                <img src="" width="100%">
+                <img src="/static/images/placeholder.jpg" class="img-fluid" alt="{{ recipe.title }}">
                 {% else %}
-                <img src="{{ recipe.featured_image.url }}" width="100%">
+                <img src="{{ recipe.featured_image.url }}" class="img-fluid" alt="{{ recipe.title }}">
                 {% endif %}
             </div>
         </div>
@@ -33,7 +33,7 @@
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
-                            {{ total.comments }}
+                            {{ total_comments }}
                         </strong>
                         {% endwith %}
                     </div>
