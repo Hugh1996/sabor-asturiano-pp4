@@ -1,5 +1,7 @@
+
 body {
     background-color: #F9FAFC;
+    font-family: 'Bitter', serif;
 }
 
 .light-bg {
@@ -8,6 +10,10 @@ body {
 
 .main-bg {
     background-color: #F9FAFC;
+}
+
+.primary {
+    background-color: rgba(114, 63, 95, 1);
 }
 
 .card {
@@ -20,6 +26,7 @@ body {
 }
 
 .image-flash {
+    background-color: rgba(252, 185, 0, 1);
     position: absolute;
     bottom: 5%;
     min-width: 30%;
@@ -41,8 +48,8 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
-    color: white;
+    background-color: rgb(211, 210, 210);
+    color: rgba(114, 63, 95, 1);
     position: relative;
 }
 
@@ -65,7 +72,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: gold;
+    color: rgba(114, 63, 95, 1);
 }
 
 .post-title {
@@ -75,18 +82,18 @@ body {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: rgba(114, 63, 95, 1);
 }
 
 .btn-signup {
-    background-color: blue;
+    background-color: #0b5fff;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: gold;
-    color: blue
+    background-color: #287d3c;
+    color: #0b5fff;
 }
 
 .link {
@@ -111,4 +118,8 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+footer {
+    font-family: 'Bitter', serif;
 }
