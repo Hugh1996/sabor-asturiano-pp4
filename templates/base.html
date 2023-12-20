@@ -26,7 +26,7 @@
 
     <nav class="primary navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fs-2" href="{% url 'home' %}">SaborAsturiano  |</a>
+            <a class="navbar-brand text-white fs-2" href="{% url 'home' %}">SaborAsturiano    |</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -59,18 +59,18 @@
 
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-        <p class="bg-warning text-white m-3">You are logged in as {{ user }}</p>
+        <p class="text-white m-3 bg-info d-inline">You are logged in as {{ user }}</p>
         {% else %}
-        <p class="bg-warning text-white m-3">You are not logged in</p>
+        <p class="text-white m-3 bg-info d-inline">You are not logged in</p>
         {% endif %}
         {% block content %}
-        <!-- Content Goes here -->
+        <!-- Base content -->
         {% endblock content %}
     </main>
 
     <!-- Footer -->
     <footer class="primary flex justify-center w-full h-20 mt-auto align-center">
-        <p class="text-sm font-thin text-white m-3">A Django project by <span class="text-lg">Hugh Geaney</span></p>
+        <p class="text-sm font-thin text-white m-3 fs-6">A Django project by <span class="text-lg">Hugh Geaney</span></p>
     </footer>
 </body>
 
