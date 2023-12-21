@@ -31,8 +31,12 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <span class="navbar-text ms-auto text-white fs-5 mt-2">
-                Discover the Flavor of Asturias
+            <span>
+                {% if user.is_authenticated %}
+                <p class="fs-5 pt-4 text-white">You are logged in as {{ user }}</p>
+                {% else %}
+                <p class="fs-5 pt-4 text-white">You are not logged in</p>
+                {% endif %}
             </span>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
@@ -58,11 +62,9 @@
     </nav>
 
     <main class="flex-shrink-0 main-bg">
-        {% if user.is_authenticated %}
-        <p class="text-white m-3 bg-info d-inline">You are logged in as {{ user }}</p>
-        {% else %}
-        <p class="text-white m-3 bg-info d-inline">You are not logged in</p>
-        {% endif %}
+        <div class="section-bg d-flex flex-column align-items-center justify-content-center">
+            <p class="text-white fs-4">Discover the Flavor of Asturias</p>
+        </div>
         {% block content %}
         <!-- Base content -->
         {% endblock content %}
