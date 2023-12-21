@@ -28,8 +28,11 @@
                                 <p class="card-text">{{ recipe.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">{{ recipe.created_on }} <i class="far fa-heart"></i>
-                                {{ recipe.number_of_likes }}</p>
+                            <p class="card-text text-muted h6">
+                                {{ recipe.created_on }} 
+                                <i class="far fa-heart"></i> {{ recipe.number_of_likes }}
+                                <span class="ms-1"><i class="far fa-comment"></i> {{ recipe.number_of_comments }}</span>
+                            </p>
                         </div>
                     </div>
                 </div>
