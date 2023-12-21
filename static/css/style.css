@@ -13,7 +13,7 @@ body {
 }
 
 .section-bg {
-    background-image: url('/static/images/asturias.jpg');
+    background-image: url('/static/images/riba.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ body {
 }
 
 .section-bg p {
-    background-color: rgba(114, 63, 95, 0.7);
+    background-color: rgba(114, 63, 95, 0.6);
     padding: 40px;
     height: 120px;
     width: 400px;
