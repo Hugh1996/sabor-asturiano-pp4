@@ -26,44 +26,49 @@
 
     <nav class="primary navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fs-2" href="{% url 'home' %}">SaborAsturiano    |</a>
+            <a class="navbar-brand text-white fs-1 pb-2" href="{% url 'home' %}">SaborAsturiano    |</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <span>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mb-lg-0 ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fs-5" aria-current="page" href="{% url 'home' %}"><i class="fa-solid fa-house-chimney"></i>   Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fs-5" aria-current="page" href=""><i class="fa-solid fa-utensils"></i>   Recipes</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="{% url 'account_logout' %}"><i class="fa-solid fa-arrow-right-from-bracket"></i>   Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="{% url 'account_signup' %}"><i class="fa-solid fa-user-plus"></i>   Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="{% url 'account_login' %}"><i class="fa-solid fa-right-to-bracket"></i>   Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <span class="ml-auto">
                 {% if user.is_authenticated %}
                 <p class="fs-5 pt-4 text-white">You are logged in as {{ user }}</p>
                 {% else %}
                 <p class="fs-5 pt-4 text-white">You are not logged in</p>
                 {% endif %}
             </span>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white fs-5" aria-current="page" href="{% url 'home' %}">Home</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link text-white fs-5" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link text-white fs-5" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white fs-5" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
-                
-                </ul>
-            </div>
         </div>
     </nav>
 
     <main class="flex-shrink-0 main-bg">
         <div class="section-bg d-flex flex-column align-items-center justify-content-center">
-            <p class="text-white fs-4">Discover the Flavor of Asturias</p>
+            <div class="small-bg">
+                <h3 class="text-white fs-4">SaborAsturiano</h3>
+                <p class="text-white fs-4">Discover the Flavor of Asturias</p>
+            </div>
         </div>
         {% block content %}
         <!-- Base content -->
@@ -71,9 +76,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="primary flex justify-center w-full h-20 mt-auto align-center">
-        <p class="text-sm font-thin text-white m-3 fs-6">A Django project by <span class="text-lg">Hugh Geaney</span></p>
+    <footer class="primary flex">
+        <p class="text-sm font-thin text-white m-3 fs-6 text-center">Copyright <i class="fa-regular fa-copyright"></i> SaborAsturiano 2023</p>
     </footer>
 </body>
+<script src="https://kit.fontawesome.com/bb021deaf1.js" crossorigin="anonymous"></script>
 
 </html>

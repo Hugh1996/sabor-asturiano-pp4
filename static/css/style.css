@@ -1,4 +1,8 @@
 
+.nav-item:hover {
+    border-bottom: 2px solid white;
+}
+
 body {
     background-color: #F9FAFC;
     font-family: 'Bitter', serif;
@@ -22,11 +26,15 @@ body {
     height: 400px;
 }
 
-.section-bg p {
+.small-bg {
     background-color: rgba(114, 63, 95, 0.6);
     padding: 40px;
     height: 120px;
     width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .primary {
