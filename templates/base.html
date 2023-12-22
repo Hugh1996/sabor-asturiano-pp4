@@ -66,8 +66,11 @@
     <main class="flex-shrink-0 main-bg">
         <div class="section-bg d-flex flex-column align-items-center justify-content-center">
             <div class="small-bg">
-                <h3 class="text-white fs-4">SaborAsturiano</h3>
+                <h3 class="text-white fs-3">SaborAsturiano</h3>
                 <p class="text-white fs-4">Discover the Flavor of Asturias</p>
+                <a href="{% url 'account_signup' %}" class="btn btn-rounded section-btn">
+                    Sign up now!
+                </a>
             </div>
         </div>
         {% block content %}
