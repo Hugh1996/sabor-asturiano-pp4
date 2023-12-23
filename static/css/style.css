@@ -1,13 +1,14 @@
-
+/* Navigation */
 .nav-item:hover {
     border-bottom: 2px solid white;
 }
 
 body {
     background-color: #F9FAFC;
-    font-family: 'Bitter', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
+/* Background Colors */
 .light-bg {
     background-color: #fff;
 }
@@ -17,7 +18,7 @@ body {
 }
 
 .section-bg {
-    background-image: url('/static/images/riba.jpg');
+    background-image: url('/static/images/lastres.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -38,30 +39,23 @@ body {
     border-radius: 5px;
 }
 
-.section-btn {
-    background-color: rgba(114, 63, 95, 0.7);
-    border-radius: 5px;
-    color: white;
-    font-size: 20px;
-    margin-top: 10px;
-    border: 2px solid white;
-}
-
-.section-btn:hover {
-    background-color: rgba(252, 185, 0, 1);
-    color: white;
-}
-
 .primary {
     background-color: rgba(114, 63, 95, 1);
 }
 
+/* Index.html */
 .text-justify {
     text-align: justify;
 }
 
-/* Cards */ 
+.left-image, .right-image {
+    height: 450px;
+    width: 350px;
+    border-radius: 15px;
+}
 
+
+/* Recipe Styles */ 
 .card {
     border: rgba(114, 63, 95, 1);
     border-radius: 15px;
@@ -139,6 +133,7 @@ body {
     margin-left: 5%;
 }
 
+/* Button/Link Styles */
 .btn-signup {
     background-color: rgba(114, 63, 95, 1);
     color: #fff;
@@ -148,6 +143,20 @@ body {
 .btn-signup:active {
     background-color: rgba(252, 185, 0, 1);
     color: #fff;
+}
+
+.section-btn {
+    background-color: rgba(114, 63, 95, 0.7);
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    border: 2px solid white;
+}
+
+.section-btn:hover {
+    background-color: rgba(252, 185, 0, 1);
+    color: white;
 }
 
 .link {
@@ -174,6 +183,7 @@ body {
     border: none;
 }
 
+/* Footer */
 footer {
     font-family: 'Bitter', sans-serif;
     margin-top: auto;
