@@ -83,3 +83,38 @@ class RecipeLike(View):
             recipe.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+class RecipeCreate(View):
+
+    def get(self, request, slug=None, *args, **kwargs):
+        if slug:
+            recipe = get_object_or_404(Recipe, slug=slug)
+            form = RecipeForm(instance=recipe)
+        else:
+            form = RecipeForm()
+
+        return render(
+            request,
+            "create_recipe.html",
+            {"form": form}
+        )
+
+    def post(self, request, slug=None, *args, **kwargs):
+        if slug:
+            recipe = get_object_or_404(Recipe, slug=slug)
+            form = RecipeForm(request.POST, request.FILES, instance=recipe)
+        else:
+            form = RecipeForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.instance.author = request.user
+            form.save()
+            return HttpResponseRedirect(reverse('create_recipe.html', args=[slug]))
+
+        return render(
+            request,
+            "create_recipe.html",
+            {"form": form}
+        )
+
