@@ -7,9 +7,11 @@
     <div class="small-bg">
         <h3 class="text-white fs-3">SaborAsturiano</h3>
         <p class="text-white fs-4">Discover the Flavor of Asturias</p>
+        {% if not request.user.is_authenticated %}
         <a href="{% url 'account_signup' %}" class="btn btn-rounded section-btn">
             Sign up now!
         </a>
+        {% endif %}
     </div>
 </div>
 <div class="container my-5">
