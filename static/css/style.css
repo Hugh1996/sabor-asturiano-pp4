@@ -56,6 +56,10 @@ body {
     background-color: rgba(114, 63, 95, 1);
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 /* Cards */ 
 
 .card {

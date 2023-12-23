@@ -37,7 +37,7 @@
                         <a class="nav-link active text-white fs-5" aria-current="page" href="{% url 'home' %}"><i class="fa-solid fa-house-chimney"></i>   Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white fs-5" aria-current="page" href=""><i class="fa-solid fa-utensils"></i>   Recipes</a>
+                        <a class="nav-link active text-white fs-5" aria-current="page" href="{% url 'recipe_list' %}"><i class="fa-solid fa-utensils"></i>   Recipes</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">

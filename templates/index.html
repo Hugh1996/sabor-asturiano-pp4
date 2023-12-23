@@ -2,61 +2,33 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
-
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for recipe in recipe_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in recipe.featured_image.url %}
-                                <img class="card-img-top" src="/static/images/placeholder.jpg">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ recipe.featured_image.url }}">
-                                {% endif %}
-                                <div class="image-flash fw-bold">
-                                    <p class="author">Author: {{ recipe.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
-                                <h2 class="card-title">{{ recipe.title }}</h2>
-                                <p class="card-text">{{ recipe.excerpt }}</p>
-                            </a>
-                            <hr />
-                            <p class="card-text text-muted h6">
-                                {{ recipe.created_on }}
-                                <i class="far fa-heart"></i> {{ recipe.number_of_likes }}
-                                <span class="ms-1"><i class="far fa-comment"></i> {{ recipe.number_of_comments }}</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-
-            </div>
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col-md-6 mx-auto text-center">
+            <h2>About</h2>
+            <p class="text-justify">Welcome to SaborAsturiano, your ultimate destination for exploring the rich and diverse world of Asturian cuisine. At
+                SaborAsturiano, we are passionate about celebrating the culinary heritage of Asturias, blending traditional flavors
+                with
+                a touch of modern creativity. Our mission is to create a community of Asturian food enthusiasts who share a love for
+                the
+                region's gastronomic treasures.</p>
+            <h4>Our Vision</h4>
+            <p class="text-justify"><strong>Preserving Tradition:</strong> SaborAsturiano is more than just a recipe website; it's a dedication to
+                preserving the authentic
+                tastes of Asturias. We believe in the importance of passing down cherished recipes from generation to generation,
+                ensuring that the rich culinary tapestry of Asturian culture endures.</p>
+            <h4>What You'll Find</h4>
+            <p class="text-justify"><strong>Recipes for Every Occasion:</strong> From traditional Asturian classics to innovative creations, our recipes
+                cover a wide range
+                of flavors and occasions. Explore our collection and bring the taste of Asturias to your table</p>
+            <h4>Connect With Us</h4>
+            <p class="text-justify">SaborAsturiano is not just a website; it's a community where everyone is welcome. Connect with us, share
+                your culinary creations, and be a part of the SaborAsturiano experience. Join us in celebrating the flavors,
+                traditions,
+                and community spirit that define Asturian cuisine.
+            
+                Thank you for being a part of our journey. ¡Buen provecho!</p>
         </div>
     </div>
-    <!-- Pagination -->
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
 </div>
 {%endblock%}
