@@ -96,6 +96,7 @@ class AddRecipe(View):
         if form.is_valid():
             recipe = form.save(commit=False)
             recipe.author = request.user
+            recipe.is_approved = False
             recipe.save()
             return redirect('recipe_detail', slug=recipe.slug)
-        return render(request, 'add_recipe.html', {'form': form})
+        return render(request, 'add_recipe.html', {'form': form, 'awaiting_approval': True})

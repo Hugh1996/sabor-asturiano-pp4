@@ -138,6 +138,7 @@ body {
     background-color: rgba(114, 63, 95, 1);
     color: #fff;
     width: 150px;
+    border-radius: 10px;
 }
 
 .btn-signup:hover,
