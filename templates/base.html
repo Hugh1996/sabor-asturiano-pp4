@@ -41,7 +41,7 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link text-white fs-5" href=""><i class="fa-solid fa-utensils"></i> Add Recipe</a>
+                        <a class="nav-link text-white fs-5" href="{% url 'add_recipe' %}"><i class="fa-solid fa-utensils"></i> Add Recipe</a>
                     </li>
                     {% endif %}
                     {% if user.is_authenticated %}

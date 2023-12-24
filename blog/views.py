@@ -85,14 +85,12 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
-
 class AddRecipe(View):
-    @login_required
+    
     def get(self, request, *args, **kwargs):
         form = RecipeForm()
         return render(request, 'add_recipe.html', {'form': form})
 
-    @login_required
     def post(self, request, *args, **kwargs):
         form = RecipeForm(request.POST)
         if form.is_valid():
