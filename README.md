@@ -130,9 +130,11 @@ This section outlines the various technologies used throughout the project and t
 - The Recipe and Comment models were implemented with guidance from the I Think There I Blog walkthrough, for which credit is duly given.
 - The starter templates for base.html, index.html, and recipe_detail.html were sourced from the same walkthrough and have been adapted for our project.
 - The style.css file, credited to the I Think There I Blog walkthrough, has been used with amendments as required to suit our project needs.
-- Credit goes to www.directoalpaladar.com for providing the recipes used.
+- Credit goes to www.directoalpaladar.com for providing the recipe ingredients and intructions uploaded.
 
 ## Media
 
-- Credit to https://www.uplabs.com/posts/food-illustration for the placeholder image.
-- Credit to www.directoalpaladar.com for providing photographs for recipes used.
+- Credit to www.uplabs.com for the recipes placeholder image.
+- Credit to www.directoalpaladar.com for providing images for uploaded recipes.
+- Credit to www.canava.com for all images used on the Home page.
+- Credit to www.icons8.com for use of the favicon.
