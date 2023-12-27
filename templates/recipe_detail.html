@@ -65,7 +65,7 @@
     </div>
     <div class="row">
         <div class="col-md-8">
-            <h3>Comments:</h3>
+            <h3>Reviews:</h3>
             <div class="card-body">
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
@@ -91,7 +91,7 @@
                 
                 {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
+                <h3>Leave a review:</h3>
                 <p>User: {{ user.username }}</p>
 
                 <!-- Display comment errors -->
