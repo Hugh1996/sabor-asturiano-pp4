@@ -86,7 +86,7 @@ class RecipeLike(View):
 
 
 class AddRecipe(View):
-    
+  
     def get(self, request, *args, **kwargs):
         form = RecipeForm()
         return render(request, 'add_recipe.html', {'form': form})
@@ -99,4 +99,5 @@ class AddRecipe(View):
             recipe.is_approved = False
             recipe.save()
             return redirect('recipe_detail', slug=recipe.slug)
-        return render(request, 'add_recipe.html', {'form': form, 'awaiting_approval': True})
+        return render(request, 'add_recipe.html', {'form': form,
+                      'awaiting_approval': True})

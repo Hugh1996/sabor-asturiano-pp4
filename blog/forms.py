@@ -13,7 +13,8 @@ class CommentForm(forms.ModelForm):
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = ['title', 'slug', 'excerpt', 'ingredients', 'instructions', 'featured_image']
+        fields = ['title', 'slug', 'excerpt', 'ingredients', 'instructions',
+                  'featured_image']
 
     featured_image = forms.ImageField(required=False)
 
@@ -23,4 +24,3 @@ class RecipeForm(forms.ModelForm):
         if commit:
             instance.save()
         return instance
-
