@@ -85,7 +85,7 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
-class ReviewEdit(View):
+class EditReview(View):
 
     def get(self, request, review_id, *args, **kwargs):
         review = get_object_or_404(Review, id=review_id)
@@ -102,6 +102,20 @@ class ReviewEdit(View):
             return redirect('recipe_detail', slug=review.recipe.slug)
         return render(request, 'edit_review.html', {'form': form,
                                                     'review': review})
+
+
+class DeleteReview(View):
+
+    def post(self, request, review_id, *args, **kwargs):
+        review = get_object_or_404(Review, id=review_id)
+
+        if request.user == review.recipe.author:
+            review.delete()
+            messages.success(request, 'Review deleted successfully.')
+        else: 
+            messages.error(request, ' You do not have permission to delete this review')
+        
+        return redirect('recipe_detail', slug=review.recipe.slug)
 
 
 class AddRecipe(View):
