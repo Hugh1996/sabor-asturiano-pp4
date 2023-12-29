@@ -86,7 +86,7 @@ class RecipeLike(View):
 
 
 class AddRecipe(View):
-  
+
     def get(self, request, *args, **kwargs):
         form = RecipeForm()
         return render(request, 'add_recipe.html', {'form': form})
