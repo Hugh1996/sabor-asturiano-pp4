@@ -8,4 +8,6 @@ urlpatterns = [
     path('recipe/<slug:slug>/', views.RecipeDetail.as_view(),
          name='recipe_detail'),
     path('like/<slug:slug>/', views.RecipeLike.as_view(), name='recipe_like'),
+    path('edit_review/<int:review_id>/', views.ReviewEdit.as_view(),
+         name='edit_review'),
 ]

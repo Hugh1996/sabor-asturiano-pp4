@@ -76,6 +76,8 @@
                         </span> wrote:
                     </p>
                     {{ review.body | linebreaks }}
+                    <a class="m-1" href="{% url 'edit_review' review.id %}">Edit</a>
+                    <a class="m-1" href="{% url 'edit_review' review.id %}">Delete</a>
                 </div>
                 {% endfor %}
             </div>

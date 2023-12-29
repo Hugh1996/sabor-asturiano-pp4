@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Recipe
+from .models import Recipe, Review
 from .forms import ReviewForm, RecipeForm
 
 
@@ -85,6 +85,25 @@ class RecipeLike(View):
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
 
+class ReviewEdit(View):
+
+    def get(self, request, review_id, *args, **kwargs):
+        review = get_object_or_404(Review, id=review_id)
+        form = ReviewForm(instance=review)
+        return render(request, 'edit_review.html', {'form': form,
+                                                    'review': review})
+
+    def post(self, request, review_id, *args, **kwargs):
+        review = get_object_or_404(Review, id=review_id)
+        form = ReviewForm(request.POST, instance=review)
+
+        if form.is_valid():
+            form.save()
+            return redirect('recipe_detail', slug=review.recipe.slug)
+        return render(request, 'edit_review.html', {'form': form,
+                                                    'review': review})
+
+
 class AddRecipe(View):
 
     def get(self, request, *args, **kwargs):
@@ -100,4 +119,4 @@ class AddRecipe(View):
             recipe.save()
             return redirect('recipe_detail', slug=recipe.slug)
         return render(request, 'add_recipe.html', {'form': form,
-                      'awaiting_approval': True})
+                      'awaiting_approval': False})
