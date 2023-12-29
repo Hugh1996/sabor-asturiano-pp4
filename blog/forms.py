@@ -1,12 +1,12 @@
 from django import forms
 from django.utils.text import slugify
 from django.shortcuts import redirect
-from .models import Comment, Recipe
+from .models import Review, Recipe
 
 
-class CommentForm(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
     class Meta:
-        model = Comment
+        model = Review
         fields = ('body',)
 
 

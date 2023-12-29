@@ -186,6 +186,10 @@ body {
     border: none;
 }
 
+.review {
+    color: rgb(235, 199, 0)
+}
+
 /* Footer */
 footer {
     font-family: 'Bitter', sans-serif;

@@ -28,24 +28,23 @@ class Recipe(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
-    def number_of_comments(self):
-        return self.comments.filter(approved=True).count()
+    def number_of_reviews(self):
+        return self.reviews.count()
 
 
-class Comment(models.Model):
+class Review(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
-                               related_name="comments")
+                               related_name="reviews")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=True)
 
     class Meta:
-        ordering = ['created_on']
+        ordering = ['-created_on']
 
     def __str__(self):
-        return f"Comment {self.body} by {self.name}"
+        return f"Review {self.body} by {self.name}"
 
 
 class Rating(models.Model):

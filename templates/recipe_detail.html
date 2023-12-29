@@ -48,9 +48,9 @@
                     
                     </div>
                     <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            {{ total_comments }}
+                        {% with reviews.count as total_reviews %}
+                        <strong class="text-secondary"><i class="fa-regular fa-star"></i>
+                            {{ total_reviews }}
                         </strong>
                         {% endwith %}
                     </div>
@@ -67,23 +67,23 @@
         <div class="col-md-8">
             <h3>Reviews:</h3>
             <div class="card-body">
-                {% for comment in comments %}
+                {% for review in reviews %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        {{ comment.name }}
+                        {{ review.name }}
                         <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
+                            {{ review.created_on }}
                         </span> wrote:
                     </p>
-                    {{ comment.body | linebreaks }}
+                    {{ review.body | linebreaks }}
                 </div>
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-4">
             <div class="card-body">
-                <!-- Display comment status -->
-                {% if commented %}
+                <!-- Display review submission -->
+                {% if reviewed %}
                 <div class="alert alert-success" role="alert">
                     Thank you for your feedback!
                 </div>
@@ -95,13 +95,13 @@
                 <p>User: {{ user.username }}</p>
 
                 <!-- Display comment errors -->
-                {% if comment_form.errors %}
+                {% if review_form.errors %}
                     <div class="alert alert-danger">
                         <strong>Error:</strong>There are issues with your review. Please correct to errors below.
                     </div>
                 {% endif %}
                 <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
+                    {{ review_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-md">Submit</button>
                 </form>

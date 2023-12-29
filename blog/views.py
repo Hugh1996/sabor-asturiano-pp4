@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe
-from .forms import CommentForm, RecipeForm
+from .forms import ReviewForm, RecipeForm
 
 
 class HomePage(View):
@@ -24,7 +24,7 @@ class RecipeDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
-        comments = recipe.comments.filter(approved=True).order_by('created_on')
+        reviews = recipe.reviews.order_by('created_on')
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -34,41 +34,41 @@ class RecipeDetail(View):
             "recipe_detail.html",
             {
                 "recipe": recipe,
-                "comments": comments,
-                "commented": False,
+                "reviews": reviews,
+                "reviewed": False,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "review_form": ReviewForm()
             },
         )
 
     def post(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
-        comments = recipe.comments.filter(approved=True).order_by('created_on')
+        reviews = recipe.reviews.order_by('created_on')
         liked = False
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-        comment_form = CommentForm(data=request.POST)
+        review_form = ReviewForm(data=request.POST)
 
-        if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
-            comment_form.instance.name = request.user.username
-            comment = comment_form.save(commit=False)
-            comment.recipe = recipe
-            comment.save()
+        if review_form.is_valid():
+            review_form.instance.email = request.user.email
+            review_form.instance.name = request.user.username
+            review = review_form.save(commit=False)
+            review.recipe = recipe
+            review.save()
         else:
-            comment_form = CommentForm()
+            review_form = ReviewForm()
 
         return render(
             request,
             "recipe_detail.html",
             {
                 "recipe": recipe,
-                "comments": comments,
-                "commented": True,
+                "reviews": reviews,
+                "reviewed": True,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "review_form": ReviewForm()
             },
         )
 

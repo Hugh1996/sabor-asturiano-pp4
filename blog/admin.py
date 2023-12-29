@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Recipe, Comment, UserProfile
+from .models import Recipe, Review
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -13,10 +13,9 @@ class RecipeAdmin(SummernoteModelAdmin):
     summernote_fields = ('ingredients', 'instructions')
 
 
-@admin.register(Comment)
-class CommentAdmin(admin.ModelAdmin):
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
 
-    list_display = ('name', 'body', 'recipe', 'created_on', 'approved')
-    list_filter = ('approved', 'created_on')
+    list_display = ('name', 'body', 'recipe', 'created_on')
+    list_filter = ('created_on',)
     search_fields = ('name', 'email', 'body')
-    actions = []
