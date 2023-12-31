@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
@@ -106,14 +107,14 @@ class EditReview(View):
 
 class DeleteReview(View):
 
+    def get(self, request, review_id, *args, **kwargs):
+        review = get_object_or_404(Review, id=review_id)
+        return render(request, 'delete_review.html', {'review': review})
+
     def post(self, request, review_id, *args, **kwargs):
         review = get_object_or_404(Review, id=review_id)
-
-        if request.user == review.recipe.author:
-            review.delete()
-            messages.success(request, 'Review deleted successfully.')
-        else: 
-            messages.error(request, ' You do not have permission to delete this review')
+        review.delete()
+        messages.success(request, 'Review deleted successfully.')
         
         return redirect('recipe_detail', slug=review.recipe.slug)
 

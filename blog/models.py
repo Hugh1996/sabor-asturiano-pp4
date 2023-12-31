@@ -47,22 +47,6 @@ class Review(models.Model):
         return f"Review {self.body} by {self.name}"
 
 
-class Rating(models.Model):
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    RATING_CHOICES = [
-        (1, '1'),
-        (2, '2'),
-        (3, '3'),
-        (4, '4'),
-        (5, '5'),
-    ]
-    rating = models.PositiveIntegerField(choices=RATING_CHOICES)
-
-    def __str__(self):
-        return f"{self.recipe} - {self.user} - {self.rating}"
-
-
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
