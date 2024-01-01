@@ -1,12 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container">
-    <h2>Edit</h2>
-    <form method="post" action="{% url 'edit_review' review.id %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save Changes</button>
-    </form>
+<div class="container log-in mt-4 d-flex justify-content-center align-items-center">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3 class="text-center">Refine Your Feedback</h3>
+            <form method="post" action="{% url 'edit_review' review.id %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-signup right mb-3">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}
