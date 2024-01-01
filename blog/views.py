@@ -70,6 +70,7 @@ class RecipeDetail(View):
                 "reviewed": True,
                 "liked": liked,
                 "review_form": ReviewForm()
+            
             },
         )
 
@@ -100,7 +101,11 @@ class EditReview(View):
 
         if form.is_valid():
             form.save()
+            messages.success(request, 'Review edited successfully!')
             return redirect('recipe_detail', slug=review.recipe.slug)
+        else:
+            messages.error(
+                request, 'Error editing the review. Please check the form.')
         return render(request, 'edit_review.html', {'form': form,
                                                     'review': review})
 
@@ -114,8 +119,7 @@ class DeleteReview(View):
     def post(self, request, review_id, *args, **kwargs):
         review = get_object_or_404(Review, id=review_id)
         review.delete()
-        messages.success(request, 'Review deleted successfully.')
-        
+        messages.success(request, 'Review deleted successfully!')
         return redirect('recipe_detail', slug=review.recipe.slug)
 
 

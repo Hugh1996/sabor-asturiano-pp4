@@ -46,15 +46,3 @@ class Review(models.Model):
     def __str__(self):
         return f"Review {self.body} by {self.name}"
 
-
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bio = models.TextField(blank=True)
-    profile_picture = CloudinaryField(
-        "image", default="default_profile_pic.jpg")
-
-    def update_profile(self, new_bio, new_profile_picture=None):
-        self.bio = new_bio
-        if new_profile_picture:
-            self.profile_picture = new_profile_picture
-        self.save()
