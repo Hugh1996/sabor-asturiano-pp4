@@ -13,14 +13,7 @@ class ReviewForm(forms.ModelForm):
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = ['title', 'slug', 'excerpt', 'ingredients', 'instructions',
+        fields = ['title', 'excerpt', 'ingredients', 'instructions',
                   'featured_image']
 
-    featured_image = forms.ImageField(required=False)
-
-    def save(self, commit=True):
-        instance = super(RecipeForm, self).save(commit=False)
-        instance.slug = slugify(instance.title)
-        if commit:
-            instance.save()
-        return instance
+    
