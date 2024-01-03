@@ -135,5 +135,23 @@ class AddRecipe(View):
             recipe = form.save(commit=False)
             recipe.author = request.user
             recipe.save()
-            messages.success(request, 'Your recipe has been submitted and is pending approval')
-        return render(request, 'add_recipe.html', {'form': form,})
+            messages.success(
+                request, 
+                'Your recipe has been submitted and is pending approval')
+        return render(request, 'add_recipe.html', {'form': form})
+
+
+class UserProfileView(View):
+
+    def get(self, request,  *args, **kwargs):
+        form = UserProfileForm()
+        return render(request, 'update_profile.html', {'form': form})
+
+    def post(self, request, *args,  **kwargs):
+        form = UserProfileForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+
+        return render(request, 'update_profile.html', {'form': form})
