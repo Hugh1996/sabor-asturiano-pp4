@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Recipe, Review, UserProfile
-from .forms import ReviewForm, RecipeForm
+from .forms import ReviewForm, RecipeForm, UserProfileForm
 
 
 class HomePage(View):
@@ -70,7 +70,6 @@ class RecipeDetail(View):
                 "reviewed": True,
                 "liked": liked,
                 "review_form": ReviewForm()
-            
             },
         )
 
@@ -136,7 +135,7 @@ class AddRecipe(View):
             recipe.author = request.user
             recipe.save()
             messages.success(
-                request, 
+                request,
                 'Your recipe has been submitted and is pending approval')
         return render(request, 'add_recipe.html', {'form': form})
 

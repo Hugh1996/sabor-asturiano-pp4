@@ -20,4 +20,4 @@ class RecipeForm(forms.ModelForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fiels = ['bio', 'profile_picture']
+        fields = ['bio', 'profile_picture']
