@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Recipe, Review
+from .models import Recipe, Review, UserProfile
 from .forms import ReviewForm, RecipeForm
 
 

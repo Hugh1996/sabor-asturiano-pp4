@@ -53,3 +53,8 @@ class Review(models.Model):
     def __str__(self):
         return f"Review {self.body} by {self.name}"
 
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField(blank=True)
+    profile_picture = CloudinaryField("image", default="placeholder")
