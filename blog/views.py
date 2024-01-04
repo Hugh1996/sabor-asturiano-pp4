@@ -145,7 +145,10 @@ class ProfileDetailView(View):
     def get(self, request, username, *args, **kwargs):
         user_profile = get_object_or_404(UserProfile, user__username=username)
         form = UserProfileForm()
-        return render(request, 'profile_detail.html', {'user_profile': user_profile, 'form': form})
+        return render(
+            request,
+            'profile_detail.html',
+            {'user_profile': user_profile, 'form': form})
 
     def post(self, request, username, *args, **kwargs):
         user_profile = get_object_or_404(UserProfile, user__username=username)
@@ -155,4 +158,7 @@ class ProfileDetailView(View):
             form.save()
             return redirect('profile_detail', username=username)
 
-        return render(request, 'profile_detail.html', {'user_profile':
+        return render(
+            request,
+            'profile_detail.html',
+            {'user_profile': user_profile, 'form': form})
