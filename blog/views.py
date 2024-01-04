@@ -151,6 +151,13 @@ class UserProfileView(View):
 
         if form.is_valid():
             form.save()
-            return redirect('profile')
+            return redirect('profile_detail', args=[user_profile.user.username])
 
         return render(request, 'update_profile.html', {'form': form})
+
+
+class ProfileDetailView(View):
+
+    def get(self, request, username, *args, **kwargs):
+        user_profile = get_object_or_404(UserProfile, user__username=username)
+        return render(request, 'profile_detail.html', {'user_profile': user_profile})
