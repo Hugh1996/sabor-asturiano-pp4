@@ -140,25 +140,25 @@ class AddRecipe(View):
         return render(request, 'add_recipe.html', {'form': form})
 
 
-class ProfileDetailView(View):
+class UpdateProfile(View):
 
-    def get(self, request, username, *args, **kwargs):
-        user_profile = get_object_or_404(UserProfile, user__username=username)
-        form = UserProfileForm()
+    def get(self, request, *args, **kwargs):
+        user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+        form = UserProfileForm(instance=user_profile)
         return render(
             request,
-            'profile_detail.html',
+            'update_profile.html',
             {'user_profile': user_profile, 'form': form})
 
-    def post(self, request, username, *args, **kwargs):
-        user_profile = get_object_or_404(UserProfile, user__username=username)
-        form = UserProfileForm()
+    def post(self, request, *args, **kwargs):
+        user_profile, created = UserProfile.objects.get_or_create(user=request.user)
+        form = UserProfileForm(request.POST, request.FILES, instance=user_profile)
 
         if form.is_valid():
             form.save()
-            return redirect('profile_detail', username=username)
+            return redirect('update_profile')
 
         return render(
             request,
-            'profile_detail.html',
+            'update_profile.html',
             {'user_profile': user_profile, 'form': form})

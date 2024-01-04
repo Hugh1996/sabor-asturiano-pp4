@@ -69,8 +69,7 @@
             <ul class="navbar-nav mb-lg-0 ml-auto">
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link text-white fs-5" href="{% url 'profile_detail' %}"><i class="fa-solid fa-user"></i> Edit
-                        Profile</a>
+                    <a class="nav-link text-white fs-5" href="{% url 'update_profile' %}"><i class="fa-solid fa-user"></i></a>
                 </li>
                 {% endif %}
             </ul>

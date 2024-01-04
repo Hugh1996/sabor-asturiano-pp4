@@ -8,7 +8,7 @@
             <h3 class="text-center">User Profile</h3>
 
             {% if user_profile.profile_picture %}
-                <img src="{{ user_profile.profile_picture.url }}" alt="Profile Picture" class="rounded-circle img-fluid mx-auto d-block">
+                <img src="{{ user_profile.profile_picture.url }}" class="rounded-circle img-fluid mx-auto d-block">
             {% else %}
                 <img src="/static/images/profile.jpg" alt="Placeholder" class="rounded-circle img-fluid mx-auto d-block">
             {% endif %}
