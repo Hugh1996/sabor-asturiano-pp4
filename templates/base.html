@@ -59,6 +59,13 @@
                     {% endif %}
                 </ul>
             </div>
+            <ul class="navbar-nav mb-lg-0 ml-auto">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link text-white fs-5 mt-2 mr-4" href="{% url 'update_profile' %}"><i class="fa-solid fa-user"></i></a>
+                </li>
+                {% endif %}
+            </ul>
             <span class="ml-auto">
                 {% if user.is_authenticated %}
                 <p class="fs-5 pt-4 text-white">You are logged in as <strong>{{ user }}</strong></p>
@@ -66,13 +73,6 @@
                 <p class="fs-5 pt-4 text-white">You are not logged in</p>
                 {% endif %}
             </span>
-            <ul class="navbar-nav mb-lg-0 ml-auto">
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link text-white fs-5" href="{% url 'update_profile' %}"><i class="fa-solid fa-user"></i></a>
-                </li>
-                {% endif %}
-            </ul>
         </div>
     </nav>
 
