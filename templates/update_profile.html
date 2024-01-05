@@ -4,13 +4,12 @@
 
 <div class="container log-in mt-4 d-flex justify-content-center align-items-center">
     <div class="row">
+        <h3 class="text-center">User Profile</h3>
         <div class="col-md-8 mt-3 offset-md-2">
-            <h3 class="text-center">User Profile</h3>
-
-            {% if "placeholder" in user_profile.profile_picture %}
-                <img src="/static/images/placeholders/profile.jpg" class="rounded-circle img-fluid mx-auto d-block" alt="Profile Picture">
+            {% if "placeholder" in user_profile.profile_picture.url %}
+            <img src="/media/placeholders/profile.jpg" alt="Profile Picture">
             {% else %}
-                <img src="{{ user_profile.profile_picture }}" class="rounded-circle img-fluid mx-auto d-block" alt="Profile Picture">
+            <img src="{{ user_profile.profile_picture }}" alt="Profile Picture">
             {% endif %}
             <p>Username: {{ user_profile.user.username }}</p>
             <p>Bio: {{ user_profile.bio }}</p>

@@ -12,7 +12,7 @@
             </div>
             <div class="col-md-8 masthead-image">
                 {% if "placeholder" in recipe.featured_image.url %}
-                <img src="/static/images/placeholders/recipe.jpg" class="img-fluid" alt="{{ recipe.title }}">
+                <img src="/media/placeholders/recipe.jpg" class="img-fluid" alt="{{ recipe.title }}">
                 {% else %}
                 <img src="{{ recipe.featured_image.url }}" class="img-fluid" alt="{{ recipe.title }}">
                 {% endif %}
