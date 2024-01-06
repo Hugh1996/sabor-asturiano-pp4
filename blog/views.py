@@ -178,3 +178,11 @@ class EditProfile(View):
             request,
             'edit_profile.html',
             {'user_profile': user_profile, 'form': form})
+
+
+class DeleteProfile(View):
+
+    def post(self, request, *args, **kwargs):
+        user_profile = UserProfile.objects.get(user=request.user)
+        user_profile.delete()
+        return redirect('profile')

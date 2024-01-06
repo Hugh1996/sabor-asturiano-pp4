@@ -14,10 +14,14 @@
             <p class="mt-3 fs-5"><strong>Name:</strong> {{ user_profile.user.username }}</p>
             <p class="mt-3 fs-5"><strong>About:</strong> {{ user_profile.bio }}</p>
             <div class="text-center">
-                <a href="{% url 'edit_profile' %}" class="btn btn-signup right mt-4 mb-1">Edit Profile</a>
+                <a href="{% url 'edit_profile' %}" class="btn btn-warning right mt-4 mb-1">Edit Profile</a>
+                <form class="d-inline" method="post" action="{% url 'delete_profile' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger mt-4 ml-2">Delete Profile</button>
+                </form>
             </div>
             <div class="text-center">
-                <a href="{% url 'home' %}" class="btn btn-signup right mt-4 mb-4">Return to Home</a>
+                <a href="{% url 'home' %}" class="btn btn-signup right mt-5 mb-5">Return to Home</a>
             </div>
         </div>
     </div>
