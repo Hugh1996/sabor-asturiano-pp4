@@ -57,4 +57,8 @@ class Review(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
-    profile_picture = CloudinaryField("image", default="placeholder")
+    profile_picture = CloudinaryField(
+        "image",
+        default="placeholder",
+        blank=False
+    )

@@ -190,13 +190,39 @@ body {
     color: rgb(235, 199, 0)
 }
 
-/* Footer */
-footer {
-    font-family: 'Bitter', sans-serif;
-    margin-top: auto;
-}
-
 .log-in {
     background-color: rgba(114, 63, 95, 0.1);
     border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    font-family: 'Bitter', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 20px
+}
+
+.github, .linkedin {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    margin: 10px;
+}
+
+.github {   
+    background-color: #007BFF;
+}
+
+.linkedin {
+    background-color: #0077B5;
+}
+
+.text {
+    font-style: italic;
 }
