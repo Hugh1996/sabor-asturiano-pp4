@@ -140,7 +140,16 @@ class AddRecipe(View):
         return render(request, 'add_recipe.html', {'form': form})
 
 
-class UpdateProfile(View):
+class ViewProfile(View):
+
+    def get(self, request, *args, **kwargs):
+        user_profile, created = UserProfile.objects.get_or_create(
+            user=request.user
+        )
+        return render(request, 'profile.html', {'user_profile': user_profile})
+
+
+class EditProfile(View):
 
     def get(self, request, *args, **kwargs):
         user_profile, created = UserProfile.objects.get_or_create(
@@ -149,7 +158,7 @@ class UpdateProfile(View):
         form = UserProfileForm(instance=user_profile)
         return render(
             request,
-            'update_profile.html',
+            'edit_profile.html',
             {'user_profile': user_profile, 'form': form})
 
     def post(self, request, *args, **kwargs):
@@ -163,9 +172,9 @@ class UpdateProfile(View):
 
         if form.is_valid():
             form.save()
-            return redirect('update_profile')
+            return redirect('profile')
 
         return render(
             request,
-            'update_profile.html',
+            'edit_profile.html',
             {'user_profile': user_profile, 'form': form})

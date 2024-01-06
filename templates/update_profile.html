@@ -7,9 +7,9 @@
         <h3 class="text-center">User Profile</h3>
         <div class="col-md-8 mt-3 offset-md-2">
             {% if "placeholder" in user_profile.profile_picture.url %}
-            <img src="/media/placeholders/profile.jpg" alt="Profile Picture">
+            <img src="/media/placeholders/profile.jpg" class="rounded-circle img-fluid mx-auto d-block" alt="Profile Picture">
             {% else %}
-            <img src="{{ user_profile.profile_picture }}" alt="Profile Picture">
+            <img src="{{ user_profile.profile_picture }}" class="rounded-circle img-fluid mx-auto d-block" alt="Profile Picture">
             {% endif %}
             <p>Username: {{ user_profile.user.username }}</p>
             <p>Bio: {{ user_profile.bio }}</p>
