@@ -6,15 +6,18 @@
     <div class="row">
         <h3 class="text-center mt-3 fw-bold fs-3">User Profile</h3>
         <div class="col-md-8 mt-3 offset-md-2 text-justify">
-            {% if "placeholder" in user_profile.profile_picture.url %}
-            <img src="/media/placeholders/profile.jpg" class="rounded-circle img-fluid mx-auto d-block" alt="Profile Picture">
+            {% if user_profile.profile_picture.url %}
+                <img src="{{ user_profile.profile_picture }}" class="rounded-circle img-fluid mx-auto d-block" alt="Profile Picture">
             {% else %}
-            <img src="{{ user_profile.profile_picture }}" class="rounded-circle img-fluid mx-auto d-block" alt="Personal Picture">
+                <img src="/media/placeholders/profile.jpg" class="rounded-circle img-fluid mx-auto d-block" alt="Profile Picture">
             {% endif %}
             <p class="mt-3 fs-5"><strong>Name:</strong> {{ user_profile.user.username }}</p>
             <p class="mt-3 fs-5"><strong>About:</strong> {{ user_profile.bio }}</p>
             <div class="text-center">
-                <a href="{% url 'edit_profile' %}" class="btn btn-signup right mt-4 mb-4">Edit Profile</a>
+                <a href="{% url 'edit_profile' %}" class="btn btn-signup right mt-4 mb-1">Edit Profile</a>
+            </div>
+            <div class="text-center">
+                <a href="{% url 'home' %}" class="btn btn-signup right mt-4 mb-4">Return to Home</a>
             </div>
         </div>
     </div>
