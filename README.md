@@ -10,18 +10,24 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 ### [User Experience](#user-experience-ux)
 
+- [Agile Methodology](#agile-methodology)
+- [User Stories](#user-stories)
+- [Target Audience](#target-audience)
+- [First Time User](#first-time-user)
+- [Registered User](#registered-user)
+- [Admin User](#admin-user)
+
 ### [Design](#design)
+
+ - [Color Scheme](#color-scheme)
+ - [Typography](#typography)
+ - [Data Models](#data-models)
 
 ### [Features](#features)
 
 - [Existing Features](#existing-features)
 - [Features Left to Implement](#features-left-to-implement)
   
-### [Development](#development)
-
-- [User Stories](#user-stories)
-- [Data Models](#data-models)
-
 ### [Testing](#testing)
 
 - [Responsiveness Testing](#responsiveness-testing)
@@ -55,15 +61,7 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 ## User Experience (UX)
 
-## Design
-
-## Features
-
-### Existing Features
-
-### Features Left to Implement
-
-### Development
+### Agile Methodology
 
 - The development process was carried out using an Agile methodology with a focus on iterative development and continuous improvement.
 - The project was managed using a GitHub Project board with user stories and tasks.
@@ -88,8 +86,49 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 13. As a user, I want to receive feedback on the status of my content submission so that I am informed about the progress of my contribution.
 14. As a user, I want to create and customize my profile with personal details and a profile picture to enhance my presence on the platform.
 15. As a user, I want to curate a list of my favorite items for quick access, ensuring that I can easily find and revisit content I love.
+16. As a Site User I can search for recipes so that I can easily find and explore new dishes or locate specific recipes that I have in mind.
 
+### Target Audience
+
+- Asturian Locals: Residents of Asturias who are interested in exploring their local culinary traditions.
+- Food Enthusiasts: Individuals passionate about regional cuisines and eager to discover the flavors of Asturias dishes.
+- Home Cooks and Chefs: Those who enjoy cooking and experimeting with different recipes. 
+- Tourists: Visitors to Asturias who are intersted in immersing themselves in the local food culture. 
+- Food Bloggers: Individuals who want to share their own experiences, recipes and reviews related to Asturian Cuisine. 
+
+### First Time User
+- Clear navigation making it easy to find recipes and community features.
+- Offers a warm introduction to the website's purpose and mission.
+- Informative content providing an overview of application functionality.
+- Easy registration process.
+- Good quality images to make the content visually appealing. 
+- 
+
+### Registered User
+- Easy login process with a personalised user account.
+- Browse recipe details
+- Ability to add new recipes, pending approval
+- Ability to like or review recipes.
+- Ability to edit or delete reviews.
+- Ability to update user profile info.
+
+### Admin User
+- Seperate secure login portal for admin users.
+- Access to dashboard for recipe and reviews.
+- Management of recipes, including the ability to view, modify, or delete recipes as needed
+- Ability to delete user accounts, providing the necessary control for managing user data and accounts.
+
+## Design
+
+### Color Scheme
+### Typography
 ### Data Models
+
+## Features
+
+### Existing Features
+
+### Features Left to Implement
 
 ![DrawSQL]()
 
