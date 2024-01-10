@@ -49,9 +49,9 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 ### [Techologies Used](#techologies-used)
 
- - [Core Development Technologies](#core-development-technologies)
-- [Python/Django Packages](#pythondjango-packages)
-- [Infrastructural Technologies](#infrastructural-technologies)
+ - [Languages](#languages)
+ - [Databases](#databases)
+ - [Frameworks](#frameworks)
 
 ### [Credits](#credits)
 
@@ -189,22 +189,34 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 This section outlines the various technologies used throughout the project and the purpose each serves.
 
-### Core Development Technologies
+### Languages
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-- Django - used as a full-stack framwork for developing the app.
-- HTML/CSS + Django Template Language used for building out site pages.
+### Databases
 
-### Python/Django Packages
+- [ElephantSQL](https://www.elephantsql.com/) - Postgres database
+- [Cloudinary](https://cloudinary.com/) - Online static file storage
 
-- Gunicorn - provides HTTP server.
-- psycopg2 - provides PostgreSQL connection.
+### Programs
 
-### Infrastructural Technologies
+- [Github](https://github.com/) - Used to create application repository and utilize agile functionaility.
+- [Codeanywhere](https://app.codeanywhere.com/) - Coding environment.
+- [Heroku](https://id.heroku.com/login) - Cloud based platform to deploy site.
+- [Canva](https://www.canva.com/) - Used to create images.
+- [Google Fonts](https://fonts.google.com/) - Used for the typography.
+- [Am I Responsive](https://ui.dev/amiresponsive) - Used to test responsiveness on all screen sizes.
+- [W3C Validator](https://validator.w3.org/) - Used to validatr HTML.
+- [CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to validate CSS.
+- [JSHint](https://jshint.com/) - Used to validate JavaScript.
+- [CI Python Linter](https://pep8ci.herokuapp.com/#) - Used to validate Python.
 
-- PostgreSQL (via ElephantSQL) - used for database.
-- Heroku - used for hosting the application.
-- Cloudinary - used for storing and media files.
-- Git - as a version control system.
+### Frameworks
+
+- [Django](https://www.djangoproject.com/)
+- [Boostrap 5.3](https://getbootstrap.com/)
 
 ## Credits
 
