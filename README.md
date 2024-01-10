@@ -2,25 +2,68 @@
 
 SaborAsturiano (AsturianTastes) is a website dedicated to Asturian cuisine, offering a mix of traditional and modern recipes. The project exists to celebrate and preserve the culinary heritage of Asturias, promoting local ingredients and seasonal content.
 
-It caters to a community of Asturian food enthusiasts, providing a platform for exploration, comments, and contributions. The website's purpose is to bring together individuals passionate about Asturian flavors, fostering a sense of community and sharing among those interested in the region's diverse culinary traditions.
+It caters to a community of Asturian food enthusiasts, providing a platform for exploration, reviews, and contributions. The website's purpose is to bring together individuals passionate about Asturian flavors, fostering a sense of community and sharing among those interested in the region's diverse culinary traditions.
 
 ![Am I Responsive?]()
 
-# Table of Contents
+## Table of Contents
 
-# Project Background
+### [User Experience](#user-experience-ux)
 
-# Features
+### [Design](#design)
 
-## Existing Features
+### [Features](#features)
 
-## Features Left to Implement
+- [Existing Features](#existing-features)
+- [Features Left to Implement](#features-left-to-implement)
+  
+### [Development](#development)
 
-# Process
+- [User Stories](#user-stories)
+- [Data Models](#data-models)
 
-## Research
+### [Testing](#testing)
 
-## Development
+- [Responsiveness Testing](#responsiveness-testing)
+- [Manual Testing](#manual-testing)
+- [General Testing](#general-testing)
+- [Lighthouse](#lighthouse)
+- [Code Validation](#code-validation)
+
+  - [HTML](#html)
+  - [CSS](#css)
+  - [Python](#python)
+  - [JavaScript](#javascript)
+
+### [Bugs](#bugs)
+
+### [Deployment](#deployment)
+
+ - [Heroku Deployment](#heroku-deployment)
+
+### [Techologies Used](#techologies-used)
+
+ - [Core Development Technologies](#core-development-technologies)
+- [Python/Django Packages](#pythondjango-packages)
+- [Infrastructural Technologies](#infrastructural-technologies)
+
+### [Credits](#credits)
+
+ - [Content](#content)
+ - [Media](#media)
+
+
+## User Experience (UX)
+
+## Design
+
+## Features
+
+### Existing Features
+
+### Features Left to Implement
+
+### Development
 
 - The development process was carried out using an Agile methodology with a focus on iterative development and continuous improvement.
 - The project was managed using a GitHub Project board with user stories and tasks.
@@ -46,17 +89,13 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 14. As a user, I want to create and customize my profile with personal details and a profile picture to enhance my presence on the platform.
 15. As a user, I want to curate a list of my favorite items for quick access, ensuring that I can easily find and revisit content I love.
 
-## Data Models
+### Data Models
 
 ![DrawSQL]()
 
-# Testing
+## Testing
 
-## Automatic Testing
-
-## Manual Testing
-
-### Overview
+### Manual Testing
 
 ### General Testing
 
@@ -66,11 +105,16 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 ### Code Validation
 
-# Bugs
+#### HTML
+#### CSS
+#### Python
+#### JavaScript
 
-# Deployment
+## Bugs
 
-## Heroku Deployment
+## Deployment
+
+### Heroku Deployment
 
 - Heroku App Creation
 
@@ -102,37 +146,37 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
   - Once the deployment is successful, click the "Open App" button to view your deployed app.
 
-# Techologies Used
+## Techologies Used
 
 This section outlines the various technologies used throughout the project and the purpose each serves.
 
-## Core Development Technologies
+### Core Development Technologies
 
 - Django - used as a full-stack framwork for developing the app.
 - HTML/CSS + Django Template Language used for building out site pages.
 
-## Python/Django Packages
+### Python/Django Packages
 
 - Gunicorn - provides HTTP server.
 - psycopg2 - provides PostgreSQL connection.
 
-## Infrastructural Technologies
+### Infrastructural Technologies
 
 - PostgreSQL (via ElephantSQL) - used for database.
 - Heroku - used for hosting the application.
 - Cloudinary - used for storing and media files.
 - Git - as a version control system.
 
-# Credits
+## Credits
 
-## Content
+### Content
 
 - The Recipe and Comment models were implemented with guidance from the I Think There I Blog walkthrough, for which credit is duly given.
 - The starter templates for base.html, index.html, and recipe_detail.html were sourced from the same walkthrough and have been adapted for our project.
 - The style.css file, credited to the I Think There I Blog walkthrough, has been used with amendments as required to suit our project needs.
 - Credit goes to www.directoalpaladar.com for providing the recipe ingredients and intructions uploaded.
 
-## Media
+### Media
 
 - Credit to www.uplabs.com for the recipes placeholder image.
 - Credit to www.directoalpaladar.com for providing images for uploaded recipes.
