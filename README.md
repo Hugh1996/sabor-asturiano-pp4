@@ -51,6 +51,7 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
  - [Languages](#languages)
  - [Databases](#databases)
+ - [Programs](#programs)
  - [Frameworks](#frameworks)
 
 ### [Credits](#credits)
@@ -60,6 +61,16 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 
 ## User Experience (UX)
+
+SaborAsturiano prioritizes a seamless and enjoyable user experience to ensure that exploring Asturian cuisine is a delightful journey for all users. The user interface is designed to be intuitive and visually appealing, making navigation through recipes effortless. Clear and concise menus guide users to easily discover traditional recipes while interactive features sucs and user-contributed content enhance the community enagement. 
+
+A responsive design has been implemented to optimize the platform for various devices to ensure users experience the same seamless interaction whether accessing SaborAsturiano from their desktops, tablets or mobile phones. 
+### Goals
+
+SaborAsturiano is commited to building an inviting online platoorm for Asturian food enthusiasts with a focus on the folloiing:
+
+- Curate a diverse collection of traditional and modern Asturian recipes to celebrate and preserve the rich culinary heritage of the region. 
+- Foster a sense of community where members can view, review and like recipes by fellow enthusiasts.
 
 ### Agile Methodology
 
@@ -121,16 +132,71 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 ## Design
 
 ### Color Scheme
+
+- The predominant color theme across the website is a subdued reddish-brown with a variations of transparency, drawing inspiration from the aesthetic credited to [A Pinch of Yum](https://pinchofyum.com/).
+- Against this backdrop, white font is employed for optimal contrast, creating a visually pleasing text presentation. On alternative surfaces, standard black text is utilized. Card test utilizes a dark bluish grey for contrast. 
+- Consistency is maintained in button design, with all buttons adopting the aforementioned reddish-brown hue. A smooth transition to a vibrant orange, without transparency, occurs on hover. Notably, the 'Edit' and 'Delete' buttons deviate from this standard, employing the Bootstrap classes 'btn-warning' and 'btn-danger' respectively for a distinct visual indication.
+  
 ### Typography
+
+Roboto is the primary font for the site, providing versatility and modernity with excellent readability across devices. Sans Serif serves as a backup font for added flexibility.
+
 ### Data Models
+
+#### Django Allauth 
+
+- Django Allauth is a third-party Django package that provides a set of authentication, registration, and account management functionalities for Django web applications. It handles user authentication, including login and registration. 
+
+#### Recipe 
+
+    title: A CharField to store the title of the recipe. 
+    slug: A SlugField to store a URL-friendly version of the title.
+    author: A ForeignKey relation to the User model, representing the author of the recipe.
+    updated_on: A DateTimeField to store the date and time when the recipe was last updated.
+    excerpt: A TextField to store a brief excerpt or summary of the recipe.
+    ingredients: A TextField to store the list of ingredients needed for the recipe.
+    instructions: A TextField to store the cooking instructions for the recipe.
+    featured_image: A ClouninaryField to store the featured image of the recipe, using Cloudinary for image storage.
+    created_on: A DateTimeField to store the date and time when the recipe was created.
+    status: A IntegerField to store the status of the recipe.
+    likes: An ManyToManyField to represent users who liked the recipe.
+    is_approved: A BooleanField to store whether the recipe is approved or not.
+
+    Meta: Specifies the default ordering for queries. In this case, recipes will be ordered by the created_on field in descending order.
+
+    save(self, *args, **kwargs): Overrides the default save method to automatically generate a slug from the title if it's not provided.
+
+    __str__(self): Returns a string representation of the recipe title.
+
+    number_of_likes(self): Returns the count of likes for the recipe.
+
+    number_of_reviews(self): Returns the count of reviews for the recipe.
+
+#### Review
+
+    recipe: A ForeignKey relation to the Recipe model, representing the recipe to which the review is associated.
+    name: A CharField to store the name of the reviewer.
+    email: An EmailField to store the email address of the reviewer.
+    body: A TextField to store the content or body of the review.
+    created_on: A DateTimeField to store the date and time when the review was created.
+
+    class Meta: Specifies the default ordering for queries. In this case, reviews will be ordered by the created_on field in descending order.
+
+    __str__(self): Returns a string representation of the review, including the review body and the name of the reviewer.
+
+#### UserProfile
+
+    user: A OneToOneField relation to the User model, creating a profile for each user.
+    bio: A TextField to store the biography or additional information about the user.
+    profile_picture: A CloudinaryField A field to store the profile picture of the user, using Cloudinary for image storage.
+
+![DrawSQL](/static/images/readme/datamodel.jpg)
 
 ## Features
 
 ### Existing Features
 
 ### Features Left to Implement
-
-![DrawSQL]()
 
 ## Testing
 
