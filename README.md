@@ -23,6 +23,11 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
  - [Typography](#typography)
  - [Data Models](#data-models)
 
+   - [Django Allauth](#django-allauth)
+   - [Recipe](#recipe)
+   - [Review](#review)
+   - [UserProfile](#userprofile)
+
 ### [Features](#features)
 
 - [Existing Features](#existing-features)
