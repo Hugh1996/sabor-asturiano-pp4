@@ -1,65 +1,78 @@
 <!-- Template for about page -->
-
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 
 <!-- Main Image -->
-<div class="section-bg d-flex flex-column align-items-center justify-content-center">
-    <div class="small-bg">
-        <h3 class="text-white fs-3">SaborAsturiano</h3>
-        <p class="text-white fs-4">Discover the Flavor of Asturias</p>
-        {% if not request.user.is_authenticated %}
-        <a href="{% url 'account_signup' %}" class="btn btn-rounded section-btn">
-            Sign up now!
-        </a>
-        {% endif %}
-    </div>
+<div
+  class="section-bg d-flex flex-column align-items-center justify-content-center"
+>
+  <div class="small-bg">
+    <h3 class="text-white fs-3">SaborAsturiano</h3>
+    <p class="text-white fs-4">Discover the Flavor of Asturias</p>
+    {% if not request.user.is_authenticated %}
+    <a href="{% url 'account_signup' %}" class="btn btn-rounded section-btn">
+      Sign up now!
+    </a>
+    {% endif %}
+  </div>
 </div>
 <div class="container my-5">
-    <div class="row justify-content-center">
-        <!-- Left Image -->
-        <div class="col-md-3 col-sm-6 my-5">
-            <img src="/static/images/chorizos.jpg" alt="chorizo" class="img-fluid left-image">
-        </div>
-        <!-- About Text -->
-        <div class="col-md-6 mx-auto text-center">
-            <h2>About</h2>
-            <p class="text-justify">Welcome to SaborAsturiano, your ultimate destination for exploring the rich and diverse
-                world of Asturian cuisine. At
-                SaborAsturiano, we are passionate about celebrating the culinary heritage of Asturias, blending traditional
-                flavors with
-                a touch of modern creativity. Our mission is to create a community of Asturian food enthusiasts who share a love
-                for the
-                region's gastronomic treasures.</p>
-            <h4>Our Vision</h4>
-            <p class="text-justify"><strong>Preserving Tradition:</strong> SaborAsturiano is more than just a recipe website;
-                it's a dedication to preserving the authentic
-                tastes of Asturias. We believe in the importance of passing down cherished recipes from generation to
-                generation,
-                ensuring that the rich culinary tapestry of Asturian culture endures.</p>
-            <h4>What You'll Find</h4>
-            <p class="text-justify"><strong>Recipes for Every Occasion:</strong> From traditional Asturian classics to
-                innovative creations, our recipes cover a wide range of flavors and occasions.
-                Explore our collection and bring the taste of Asturias to your table.</p>
-            <h4>Connect With Us</h4>
-            <p class="text-justify">Join the SaborAsturiano community by creating your account today! By becoming a member, you
-                unlock the full potential of
-                our platform. Like, review, and add your own recipes to actively participate in shaping the vibrant tapestry of
-                Asturian
-                culinary culture. Your contributions not only enrich our community but also play a crucial role in preserving
-                and
-                evolving the cherished traditions of Asturias. Let's cook, share, and celebrate together! Don't miss out on the
-                opportunity to connect with fellow Asturian food enthusiasts and make the most of your SaborAsturiano
-                experience. ¡Buen
-                provecho!
-        
-                Thank you for being a part of our journey. ¡Buen provecho!</p>
-        </div>
-        <!-- Right Image -->
-        <div class="col-md-3 col-sm-6 my-5">
-            <img src="/static/images/sidra.jpg" alt="sidra" class="img-fluid right-image">
-        </div>
+  <div class="row justify-content-center">
+    <!-- Left Image -->
+    <div class="col-md-3 col-sm-6 my-5">
+      <img
+        src="{% static 'images/chorizos.jpg' %}"
+        alt="chorizo"
+        class="img-fluid left-image"
+      />
     </div>
+    <!-- About Text -->
+    <div class="col-md-6 mx-auto text-center">
+      <h2>About</h2>
+      <p class="text-justify">
+        Welcome to SaborAsturiano, your ultimate destination for exploring the
+        rich and diverse world of Asturian cuisine. At SaborAsturiano, we are
+        passionate about celebrating the culinary heritage of Asturias, blending
+        traditional flavors with a touch of modern creativity. Our mission is to
+        create a community of Asturian food enthusiasts who share a love for the
+        region's gastronomic treasures.
+      </p>
+      <h4>Our Vision</h4>
+      <p class="text-justify">
+        <strong>Preserving Tradition:</strong> SaborAsturiano is more than just
+        a recipe website; it's a dedication to preserving the authentic tastes
+        of Asturias. We believe in the importance of passing down cherished
+        recipes from generation to generation, ensuring that the rich culinary
+        tapestry of Asturian culture endures.
+      </p>
+      <h4>What You'll Find</h4>
+      <p class="text-justify">
+        <strong>Recipes for Every Occasion:</strong> From traditional Asturian
+        classics to innovative creations, our recipes cover a wide range of
+        flavors and occasions. Explore our collection and bring the taste of
+        Asturias to your table.
+      </p>
+      <h4>Connect With Us</h4>
+      <p class="text-justify">
+        Join the SaborAsturiano community by creating your account today! By
+        becoming a member, you unlock the full potential of our platform. Like,
+        review, and add your own recipes to actively participate in shaping the
+        vibrant tapestry of Asturian culinary culture. Your contributions not
+        only enrich our community but also play a crucial role in preserving and
+        evolving the cherished traditions of Asturias. Let's cook, share, and
+        celebrate together! Don't miss out on the opportunity to connect with
+        fellow Asturian food enthusiasts and make the most of your
+        SaborAsturiano experience. ¡Buen provecho! Thank you for being a part of
+        our journey. ¡Buen provecho!
+      </p>
+    </div>
+    <!-- Right Image -->
+    <div class="col-md-3 col-sm-6 my-5">
+      <img
+        src="{% static 'images/sidra.jpg' %}"
+        alt="sidra"
+        class="img-fluid right-image"
+      />
+    </div>
+  </div>
 </div>
-{%endblock%}
+{% endblock %}
