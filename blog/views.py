@@ -12,7 +12,9 @@ class HomePage(View):
 
         return render(request, 'index.html')
 
+
 # Recipe Views
+
 
 class RecipeList(generic.ListView):
     model = Recipe
@@ -140,10 +142,12 @@ class AddRecipe(View):
                 request,
                 'Your recipe has been submitted and is pending approval')
             return redirect('add_recipe')
-            
+
         return render(request, 'add_recipe.html', {'form': form})
 
+
 # Profile Views
+
 
 class ViewProfile(View):
 
