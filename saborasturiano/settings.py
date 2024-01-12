@@ -35,7 +35,6 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 ALLOWED_HOSTS = ['sabor-asturiano-cd988cf2702b.herokuapp.com',
                  '8000-hugh1996-sabor-asturiano-p6ggop7436.us2.codeanyapp.com',
                  '8000-hugh1996-sabor-asturiano-cb0z1xomeb.us2.codeanyapp.com',
-                 '8000-hugh1996-sabor-asturiano-cb0z1xomeb.us2.codeanyapp.com',
                  '8000-hugh1996-sabor-asturiano-cb0z1xomeb.us2.codeanyapp.com']
 
 
@@ -49,11 +48,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'cloudinary',
     'django_summernote',
     'crispy_forms',
     'blog',
