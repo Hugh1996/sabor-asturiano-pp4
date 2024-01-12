@@ -201,6 +201,28 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 ### Existing Features
 
+#### Home Page
+- Navigation bar displas main heading, about section, and footer with social links are displayed.
+
+![Home](/static/images/readme/home.jpg)
+
+- Upon signing in, the sign-up button disappears.
+
+![Button Disappears](/static/images/readme/disappear.jpg)
+
+- Users are notified of their login status on the top right of the navigation bar.
+- Additional features for adding a recipe or accessing the profile appear.
+
+![Navbar](/static/images/readme/userin.jpg)
+
+- The about section contains the main deccription, vision and expectations for the application. It also informs the user of the benefits of creating an account.
+
+![About](/static/images/readme/about.jpg)
+
+- The footer contains copyright informatoio and the creators name. It also contains social links to the creators Github and LinkedIn profiles. 
+
+![Footer](/static/images/readme/footer.jpg)
+
 ### Features Left to Implement
 
 ## Testing
