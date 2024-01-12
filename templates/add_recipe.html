@@ -1,54 +1,54 @@
 <!-- Template for a user to add their own recipes -->
 
-{% extends 'base.html' %} {% block content %}
-
-{% load crispy_forms_tags %}
+{% extends 'base.html' %} {% block content %} {% load crispy_forms_tags %}
 
 <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            {% if awaiting_approval %}
-            <div class="alert alert-success mt-5" role="alert">
-                Your recipe has been submitted and is awaiting approval.
-            </div>
-            {% endif %}
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="text-center fw-bold my-2">Add a Recipe</h2>
-                </div>
-                <div class="card-body overflow-auto">
-                    <form method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                        <div class="form-group text-center mb-4">
-                            <button type="submit" class="btn btn-signup">Submit</button>
-                        </div>
-                        {% for message in messages %}
-                        <div class="alert alert-{{ message.tags }}">
-                            {{ message }}
-                        </div>
-                        {% endfor %}
-                        <div class="text-center">
-                            <a href="{% url 'home' %}" class="btn btn-signup right mt-4 mb-4">Return to Home</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      {% if awaiting_approval %}
+      <div class="alert alert-success mt-5" role="alert">
+        Your recipe has been submitted and is awaiting approval.
+      </div>
+      {% endif %}
+      <div class="card">
+        <div class="card-header">
+          <h2 class="text-center fw-bold my-2">Add a Recipe</h2>
         </div>
+        <div class="card-body overflow-auto">
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %} {{ form|crispy }}
+            <div class="form-group text-center mb-4">
+              <button type="submit" class="btn btn-signup">Submit</button>
+            </div>
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+            <div class="text-center">
+              <a href="{% url 'home' %}" class="btn btn-signup right mt-4 mb-4"
+                >Return to Home</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 <!-- Javascript to populate slugfield from title -->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var titleInput = document.getElementById('id_title');
-        var slugInput = document.getElementById('id_slug');
+  document.addEventListener("DOMContentLoaded", function () {
+    var titleInput = document.getElementById("id_title");
+    var slugInput = document.getElementById("id_slug");
 
-        titleInput.addEventListener('input', function () {
-            var title = titleInput.value;
-            var slug = title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-            slugInput.value = slug;
-        });
+    titleInput.addEventListener("input", function () {
+      var title = titleInput.value;
+      var slug = title
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^a-z0-9-]/g, "");
+      slugInput.value = slug;
     });
+  });
 </script>
 
 {% endblock content %}

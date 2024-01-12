@@ -135,9 +135,12 @@ class AddRecipe(View):
             recipe = form.save(commit=False)
             recipe.author = request.user
             recipe.save()
+            request.session['recipe_submitted'] = True
             messages.success(
                 request,
                 'Your recipe has been submitted and is pending approval')
+            return redirect('add_recipe')
+            
         return render(request, 'add_recipe.html', {'form': form})
 
 # Profile Views
