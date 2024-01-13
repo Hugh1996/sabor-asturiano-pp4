@@ -1,134 +1,160 @@
 <!-- Template for a specific recipe -->
 
-{% extends 'base.html' %} {% block content %}
-
-{% load crispy_forms_tags %}
+{% extends 'base.html' %} {% block content %} {% load crispy_forms_tags %}
 
 <div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-4 masthead-text">
-                <h1 class="post-title">{{ recipe.title }}
-                </h1>
-                <p class="post-subtitle"> {{ recipe.author }} | {{ recipe.created_on }} </p>
-            </div>
-            <div class="col-md-8 masthead-image">
-                {% if "placeholder" in recipe.featured_image.url %}
-                <img src="/media/placeholders/recipe.jpg" class="img-fluid" alt="{{ recipe.title }}">
-                {% else %}
-                <img src="{{ recipe.featured_image.url }}" class="img-fluid" alt="{{ recipe.title }}">
-                {% endif %}
-            </div>
-        </div>
+  <div class="container">
+    <div class="row g-0">
+      <div class="col-md-4 masthead-text">
+        <h1 class="post-title">{{ recipe.title }}</h1>
+        <p class="post-subtitle">
+          {{ recipe.author }} | {{ recipe.created_on }}
+        </p>
+      </div>
+      <div class="col-md-8 masthead-image">
+        {% if "placeholder" in recipe.featured_image.url %}
+        <img
+          src="/media/placeholders/recipe.jpg"
+          class="img-fluid"
+          alt="{{ recipe.title }}"
+        />
+        {% else %}
+        <img
+          src="{{ recipe.featured_image.url }}"
+          class="img-fluid"
+          alt="{{ recipe.title }}"
+        />
+        {% endif %}
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="card-body">
-                <p class="card-text ">{{ recipe.ingredients | safe }}</p>
-                <p class="card-text ">{{ recipe.instructions | safe }}</p>
-                <div class="row">
-
-                    <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form action="{% url 'recipe_like' recipe.slug %}" class="d-inline" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id value={{ recipe.slug }}" class="btn-like"><i class="fas fa-heart"></i></button>
-                                {% else %}
-                                <button type="submit" name="blogpost_id value={{ recipe.slug }}" class="btn-like"><i class="far fa-heart"></i></button>
-                                {% endif %}
-                            </form>
-                            {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
-                            <span class="text-secondary">{{ recipe.number_of_likes }}</span>
-                        </strong>
-                    
-                    </div>
-                    <div class="col-1">
-                        {% with reviews.count as total_reviews %}
-                        <strong class="text-secondary"><i class="fa-regular fa-star"></i>
-                            {{ total_reviews }}
-                        </strong>
-                        {% endwith %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
-            <h3>Reviews:</h3>
-            <div class="card-body">
-                {% for review in reviews %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ review.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ review.created_on }}
-                        </span> wrote:
-                    </p>
-                    {{ review.body | linebreaks }}
-                    <!-- Edit/Delete Reviews -->
-                    {% if user.is_authenticated %}
-                        <a class="m-1 btn btn-warning" href="{% url 'edit_review' review.id %}">Edit</a>
-                        <form method="post" action="{% url 'delete_review' review.id %}" class="d-inline">
-                            {% csrf_token %}
-                            <button type="submit" class="m-1 btn btn-danger">Delete</button>
-                        </form>
-                    {% endif %}
-                </div>
-                {% endfor %}
-                {% if messages %}
-                <div class="alert-container" role="alert">
-                    {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">
-                        {{ message }}
-                    </div>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card-body">
-                <!-- Display review submission -->
-                {% if reviewed %}
-                <div class="alert alert-success" role="alert">
-                    Thank you for your feedback!
-                </div>
+  <div class="row">
+    <div class="col">
+      <div class="card-body">
+        <p class="card-text">{{ recipe.ingredients | safe }}</p>
+        <p class="card-text">{{ recipe.instructions | safe }}</p>
+        <div class="row">
+          <div class="col-1">
+            <strong>
+              {% if user.is_authenticated %}
+              <form
+                action="{% url 'recipe_like' recipe.slug %}"
+                class="d-inline"
+                method="POST"
+              >
+                {% csrf_token %} {% if liked %}
+                <button
+                  type="submit"
+                  name="blogpost_id value={{ recipe.slug }}"
+                  class="btn-like"
+                >
+                  <i class="fas fa-heart"></i>
+                </button>
                 {% else %}
-                
-                {% if user.is_authenticated %}
-
-                <h3>Leave a review:</h3>
-                <p>User: {{ user.username }}</p>
-
-                <!-- Display review errors -->
-                {% if review_form.errors %}
-                    <div class="alert alert-danger">
-                        <strong>Error:</strong>There are issues with your review. Please correct to errors below.
-                    </div>
+                <button
+                  type="submit"
+                  name="blogpost_id value={{ recipe.slug }}"
+                  class="btn-like"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
                 {% endif %}
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ review_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-md mt-2">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
-            </div>
+              </form>
+              {% else %}
+              <span class="text-secondary"><i class="far fa-heart"></i></span>
+              {% endif %}
+              <span class="text-secondary">{{ recipe.number_of_likes }}</span>
+            </strong>
+          </div>
+          <div class="col-1">
+            {% with reviews.count as total_reviews %}
+            <strong class="text-secondary"
+              ><i class="fa-regular fa-star"></i>
+              {{ total_reviews }}
+            </strong>
+            {% endwith %}
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <hr />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Reviews:</h3>
+      <div class="card-body">
+        {% for review in reviews %}
+        <div class="comments" style="padding: 10px">
+          <p class="font-weight-bold">
+            {{ review.name }}
+            <span class="text-muted font-weight-normal">
+              {{ review.created_on }}
+            </span>
+            wrote:
+          </p>
+          {{ review.body | linebreaks }}
+          <!-- Edit/Delete Reviews -->
+          {% if user.is_authenticated %}
+          <a
+            class="m-1 btn btn-success"
+            href="{% url 'edit_review' review.id %}"
+            >Edit</a
+          >
+          <form
+            method="post"
+            action="{% url 'delete_review' review.id %}"
+            class="d-inline"
+          >
+            {% csrf_token %}
+            <button type="submit" class="m-1 btn btn-danger">Delete</button>
+          </form>
+          {% endif %}
+        </div>
+        {% endfor %} {% if messages %}
+        <div class="alert-container" role="alert">
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        <!-- Display review submission -->
+        {% if reviewed %}
+        <div class="alert alert-success" role="alert">
+          Thank you for your feedback!
+        </div>
+        {% else %} {% if user.is_authenticated %}
+
+        <h3>Leave a review:</h3>
+        <p>User: {{ user.username }}</p>
+
+        <!-- Display review errors -->
+        {% if review_form.errors %}
+        <div class="alert alert-danger">
+          <strong>Error:</strong>There are issues with your review. Please
+          correct to errors below.
+        </div>
+        {% endif %}
+        <form method="post" style="margin-top: 1.3em">
+          {{ review_form | crispy }} {% csrf_token %}
+          <button type="submit" class="btn btn-signup btn-md mt-2">
+            Submit
+          </button>
+        </form>
+        {% endif %} {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock content %}

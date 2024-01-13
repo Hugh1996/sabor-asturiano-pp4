@@ -19,20 +19,20 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 ### [Design](#design)
 
- - [Color Scheme](#color-scheme)
- - [Typography](#typography)
- - [Data Models](#data-models)
+- [Color Scheme](#color-scheme)
+- [Typography](#typography)
+- [Data Models](#data-models)
 
-   - [Django Allauth](#django-allauth)
-   - [Recipe](#recipe)
-   - [Review](#review)
-   - [UserProfile](#userprofile)
+  - [Django Allauth](#django-allauth)
+  - [Recipe](#recipe)
+  - [Review](#review)
+  - [UserProfile](#userprofile)
 
 ### [Features](#features)
 
 - [Existing Features](#existing-features)
 - [Features Left to Implement](#features-left-to-implement)
-  
+
 ### [Testing](#testing)
 
 - [Responsiveness Testing](#responsiveness-testing)
@@ -50,31 +50,31 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 ### [Deployment](#deployment)
 
- - [Heroku Deployment](#heroku-deployment)
+- [Heroku Deployment](#heroku-deployment)
 
 ### [Techologies Used](#techologies-used)
 
- - [Languages](#languages)
- - [Databases](#databases)
- - [Programs](#programs)
- - [Frameworks](#frameworks)
+- [Languages](#languages)
+- [Databases](#databases)
+- [Programs](#programs)
+- [Frameworks](#frameworks)
 
 ### [Credits](#credits)
 
- - [Content](#content)
- - [Media](#media)
-
+- [Content](#content)
+- [Media](#media)
 
 ## User Experience (UX)
 
-SaborAsturiano prioritizes a seamless and enjoyable user experience to ensure that exploring Asturian cuisine is a delightful journey for all users. The user interface is designed to be intuitive and visually appealing, making navigation through recipes effortless. Clear and concise menus guide users to easily discover traditional recipes while interactive features sucs and user-contributed content enhance the community enagement. 
+SaborAsturiano prioritizes a seamless and enjoyable user experience to ensure that exploring Asturian cuisine is a delightful journey for all users. The user interface is designed to be intuitive and visually appealing, making navigation through recipes effortless. Clear and concise menus guide users to easily discover traditional recipes while interactive features sucs and user-contributed content enhance the community enagement.
 
-A responsive design has been implemented to optimize the platform for various devices to ensure users experience the same seamless interaction whether accessing SaborAsturiano from their desktops, tablets or mobile phones. 
+A responsive design has been implemented to optimize the platform for various devices to ensure users experience the same seamless interaction whether accessing SaborAsturiano from their desktops, tablets or mobile phones.
+
 ### Goals
 
 SaborAsturiano is commited to building an inviting online platoorm for Asturian food enthusiasts with a focus on the folloiing:
 
-- Curate a diverse collection of traditional and modern Asturian recipes to celebrate and preserve the rich culinary heritage of the region. 
+- Curate a diverse collection of traditional and modern Asturian recipes to celebrate and preserve the rich culinary heritage of the region.
 - Foster a sense of community where members can view, review and like recipes by fellow enthusiasts.
 
 ### Agile Methodology
@@ -108,19 +108,21 @@ SaborAsturiano is commited to building an inviting online platoorm for Asturian 
 
 - Asturian Locals: Residents of Asturias who are interested in exploring their local culinary traditions.
 - Food Enthusiasts: Individuals passionate about regional cuisines and eager to discover the flavors of Asturias dishes.
-- Home Cooks and Chefs: Those who enjoy cooking and experimeting with different recipes. 
-- Tourists: Visitors to Asturias who are intersted in immersing themselves in the local food culture. 
-- Food Bloggers: Individuals who want to share their own experiences, recipes and reviews related to Asturian Cuisine. 
+- Home Cooks and Chefs: Those who enjoy cooking and experimeting with different recipes.
+- Tourists: Visitors to Asturias who are intersted in immersing themselves in the local food culture.
+- Food Bloggers: Individuals who want to share their own experiences, recipes and reviews related to Asturian Cuisine.
 
 ### First Time User
+
 - Clear navigation making it easy to find recipes and community features.
 - Offers a warm introduction to the website's purpose and mission.
 - Informative content providing an overview of application functionality.
 - Easy registration process.
-- Good quality images to make the content visually appealing. 
-- 
+- Good quality images to make the content visually appealing.
+-
 
 ### Registered User
+
 - Easy login process with a personalised user account.
 - Browse recipe details
 - Ability to add new recipes, pending approval
@@ -129,6 +131,7 @@ SaborAsturiano is commited to building an inviting online platoorm for Asturian 
 - Ability to update user profile info.
 
 ### Admin User
+
 - Seperate secure login portal for admin users.
 - Access to dashboard for recipe and reviews.
 - Management of recipes, including the ability to view, modify, or delete recipes as needed
@@ -139,22 +142,22 @@ SaborAsturiano is commited to building an inviting online platoorm for Asturian 
 ### Color Scheme
 
 - The predominant color theme across the website is a subdued reddish-brown with a variations of transparency, drawing inspiration from the aesthetic credited to [A Pinch of Yum](https://pinchofyum.com/).
-- Against this backdrop, white font is employed for optimal contrast, creating a visually pleasing text presentation. On alternative surfaces, standard black text is utilized. Card test utilizes a dark bluish grey for contrast. 
+- Against this backdrop, white font is employed for optimal contrast, creating a visually pleasing text presentation. On alternative surfaces, standard black text is utilized. Card test utilizes a dark bluish grey for contrast.
 - Consistency is maintained in button design, with all buttons adopting the aforementioned reddish-brown hue. A smooth transition to a vibrant orange, without transparency, occurs on hover. Notably, the 'Edit' and 'Delete' buttons deviate from this standard, employing the Bootstrap classes 'btn-warning' and 'btn-danger' respectively for a distinct visual indication.
-  
+
 ### Typography
 
 Roboto is the primary font for the site, providing versatility and modernity with excellent readability across devices. Sans Serif serves as a backup font for added flexibility.
 
 ### Data Models
 
-#### Django Allauth 
+#### Django Allauth
 
-- Django Allauth is a third-party Django package that provides a set of authentication, registration, and account management functionalities for Django web applications. It handles user authentication, including login and registration. 
+- Django Allauth is a third-party Django package that provides a set of authentication, registration, and account management functionalities for Django web applications. It handles user authentication, including login and registration.
 
-#### Recipe 
+#### Recipe
 
-    title: A CharField to store the title of the recipe. 
+    title: A CharField to store the title of the recipe.
     slug: A SlugField to store a URL-friendly version of the title.
     author: A ForeignKey relation to the User model, representing the author of the recipe.
     updated_on: A DateTimeField to store the date and time when the recipe was last updated.
@@ -202,6 +205,7 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 ### Existing Features
 
 #### Home Page
+
 - Navigation bar displas main heading, about section, and footer with social links are displayed.
 
 ![Home](/static/images/readme/home.jpg)
@@ -225,9 +229,27 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 #### Footer
 
-- The footer contains copyright informatoio and the creators name. It also contains social links to the creators Github and LinkedIn profiles. 
+- The footer contains copyright informatoio and the creators name. It also contains social links to the creators Github and LinkedIn profiles.
 
 ![Footer](/static/images/readme/footer.jpg)
+
+#### Recipes
+
+- Users have the ability to browse a list of recipes, each accompanied by an image and a brief excerpt that highlights the essence of the recipe.
+- The author's name is prominently displayed, and users can also see the like and review counts, providing insights into the popularity of each recipe.
+
+![Recipes](/static/images/readme/recipes.jpg)
+
+- Upon selecting a recipe for viewing, users will be presented with a detailed page featuring a clear image of the recipe. The page includes a comprehensive list of ingredients and step-by-step instructions for users to try the recipe at home.
+- Additionally, users can see the number of likes and reviews for the recipe, and they have the option to view the reviews themselves. If logged in, users can interact with the recipe by liking it or adding their own review, enhancing the overall user engagement with the platform.
+
+![RecipeDetail](/static/images/readme/recipedetail.jpg)
+![RecipeDetail2](/static/images/readme/recipedetail2.jpg)
+![Reviews](/static/images/readme/review.jpg)
+
+- Upon successfully adding a review, users will receive a notification confirming the successful addition and expressing gratitude for their feedback. Furthermore, users will have the option to both edit and delete their reviews, providing them with control and flexibility over their contributions.
+
+![Reviews](/static/images/readme/reviewfeedback.jpg)
 
 #### Register
 
@@ -241,6 +263,8 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 - The navbar will display a logged-in status for users who have successfully signed in.
 
 ![Login](/static/images/readme/login.jpg)
+
+![Add Recipe](/static/images/readme/addrecipe.jpg)
 
 #### Logout
 
@@ -263,8 +287,11 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 ### Code Validation
 
 #### HTML
+
 #### CSS
+
 #### Python
+
 #### JavaScript
 
 ## Bugs
@@ -308,10 +335,11 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 This section outlines the various technologies used throughout the project and the purpose each serves.
 
 ### Languages
+
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
 
 ### Databases
 
