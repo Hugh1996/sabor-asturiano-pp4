@@ -335,9 +335,31 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 #### CSS
 
+The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) service was used to validate to ensure no errors occurred. See results [here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsabor-asturiano-cd988cf2702b.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+
 #### Python
 
+- blog app
+
+  - admin.py
+  - forms.py
+  - models.py
+  - urls.py
+  - views.py
+
+- saborasturiano
+
+  - settings.py
+  - urls.py
+
 #### JavaScript
+
+The [JSHint JavaScript Validator](https://jshint.com/) service was used to validate to ensure no errors occurred. The following metrics were returned on JSHint.
+
+- There are 2 functions in this file.
+- Function with the largest signature take 0 arguments, while the median is 0.
+- Largest function has 3 statements in it, while the median is 3.
+- The most complex function has a cyclomatic complexity value of 1 while the median is 1.
 
 ## Deployment
 
