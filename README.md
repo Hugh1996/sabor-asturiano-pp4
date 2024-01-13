@@ -339,34 +339,60 @@ The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) service was used t
 
 #### Python
 
-All below py files were passed through the [CI Python Linter](https://pep8ci.herokuapp.com/). No errors were found. 
+All below py files were passed through the [CI Python Linter](https://pep8ci.herokuapp.com/). No errors were found.
 
-blog app
-
-  - admin.py
-  - forms.py
-  - models.py
-  - urls.py
-  - views.py
-
-saborasturiano
+##### blog app
 
 <details>
-<summary></summary>
+<summary>admin.py</summary>
+
+![admin.py](https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/adminblog_nievlq.jpg)
+
 </details>
+
+<details>
+<summary>forms.py</summary>
+
+![form.py](https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/formblog_wzpo0s.jpg)
+
+</details>
+
+<details>
+<summary>models.py</summary>
+
+![models.py](https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/modelblog_k1rb1d.jpg)
+
+</details>
+
+<details>
+<summary>urls.py</summary>
+
+![url.py](https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/urlblog_qmzzgm.jpg)
+
+</details>
+
+<details>
+<summary>views.py</summary>
+
+![views.py](!<https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/viewblog_lbkrxn.jpg)>
+
+</details>
+
+##### saborasturiano
 
 <details>
 <summary>settings.py</summary>
 
-![settings.py](/static/images/)
+![settings.py](https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/settingsabor_oklnqq.jpg)
+
 </details>
 
 <details>
 <summary>url.py</summary>
 
 ![url.py](https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/urlsabor_o7orbg.jpg)
-</details>
 
+</details>
 
 #### JavaScript
 
