@@ -264,13 +264,17 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 - Upon selecting a recipe for viewing, users will be presented with a detailed page featuring a clear image of the recipe. The page includes a comprehensive list of ingredients and step-by-step instructions for users to try the recipe at home.
 - Additionally, users can see the number of likes and reviews for the recipe, and they have the option to view the reviews themselves. If logged in, users can interact with the recipe by liking it or adding their own review, enhancing the overall user engagement with the platform.
 
+#### View Recipe/Reviews
+
 ![RecipeDetail](/static/images/readme/recipedetail.jpg)
 ![RecipeDetail2](/static/images/readme/recipedetail2.jpg)
 ![Reviews](/static/images/readme/review.jpg)
 
-- Upon successfully adding a review, users will receive a notification confirming the successful addition and expressing gratitude for their feedback. Furthermore, users will have the option to both edit and delete their reviews, providing them with control and flexibility over their contributions.
+- Upon successfully adding a review, users will receive a notification confirming the successful addition and expressing gratitude for their feedback. Furthermore, users will have the option to both edit and delete their reviews, providing them with control and flexibility over their contributions. This incorporates CRUD functionality.
 
 ![Reviews](/static/images/readme/reviewfeedback.jpg)
+
+#### Add a Recipe
 
 - For logged-in users, the platform offers the capability to contribute by adding their own recipes. These submissions are sent to the admin site as drafts for review and approval.
 - When submitting a recipe, users must provide a title, a brief description, list of ingredients, and step-by-step instructions.
@@ -283,6 +287,8 @@ Roboto is the primary font for the site, providing versatility and modernity wit
   
 ![Add Recipe](/static/images/readme/recipesubmit.jpg)
 
+#### User Profile
+
 - When a user is logged in, they can click on the profile icon to view their profile picture or bio. Their username will alrwady be displayed. A placeholder photo will automatically be displayed if the user has not uploaded a photo, and the bio section will be blank until the user adds their own information. This ensures a consistent and user-friendly experience within the profile section.
 
 ![User Profile](/static/images/readme/userprofile.jpg)
@@ -291,6 +297,16 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 - Alternatively, they can choose to delete their profile details. Upon deletion, the profile will be wiped clean, leaving only the username intact. This empowers users to manage and customize their profile information according to their preferences.
 
 ![Edit Profile](/static/images/readme/editprofile.jpg)
+
+##### Admin Features
+
+- The Django built-in administrator panel provides comprehensive control over the website.
+- Within the admin panel, admins can approve, update, and delete recipes, enabling effective content management.
+- The admin an manage reviews.
+- Further management is implemented in the control of user account. 
+- Both of the above implement CRUD functionality.
+
+![Admin](/static/images/readme/admin.jpg)
 
 ### Features Left to Implement
 
