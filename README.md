@@ -333,13 +333,25 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 #### HTML
 
+- [Home]
+- [Recipes]
+- [Recipes Detail]
+- [Register]
+- [Login]
+- [Logout]
+- [Add Recipe]
+- [User Profile]
+- [Edit Profile]
+
+The [W3C Markup Validator](https://validator.w3.org/) service was used to validate to ensure no errors occurred.
+
 #### CSS
 
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) service was used to validate to ensure no errors occurred. See results [here](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsabor-asturiano-cd988cf2702b.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
 
 #### Python
 
-All below py files were passed through the [CI Python Linter](https://pep8ci.herokuapp.com/). No errors were found.
+All below py files were passed through the [CI Python Linter](https://pep8ci.herokuapp.com/).
 
 ##### blog app
 
@@ -396,12 +408,14 @@ All below py files were passed through the [CI Python Linter](https://pep8ci.her
 
 #### JavaScript
 
-The [JSHint JavaScript Validator](https://jshint.com/) service was used to validate to ensure no errors occurred. The following metrics were returned on JSHint.
+The [JSHint JavaScript Validator](https://jshint.com/) service was used to validate to ensure no errors occurred.
 
-- There are 2 functions in this file.
-- Function with the largest signature take 0 arguments, while the median is 0.
-- Largest function has 3 statements in it, while the median is 3.
-- The most complex function has a cyclomatic complexity value of 1 while the median is 1.
+<details>
+<summary>JSHint</summary>
+
+![JSHint](https://res.cloudinary.com/duktk6qg0/image/upload/v1705184188/js_a993f4.jpg)
+
+</details>
 
 ## Deployment
 

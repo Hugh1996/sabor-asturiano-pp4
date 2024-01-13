@@ -118,15 +118,13 @@
           </li>
           {% endif %}
         </ul>
-        <span class="ml-auto">
-          {% if user.is_authenticated %}
-          <p class="fs-5 pt-4 text-white">
-            You are logged in as <strong>{{ user }}</strong>
-          </p>
-          {% else %}
-          <p class="fs-5 pt-4 text-white">You are not logged in</p>
-          {% endif %}
-        </span>
+        {% if user.is_authenticated %}
+        <p class="fs-5 pt-4 text-white">
+          You are logged in as <strong>{{ user }}</strong>
+        </p>
+        {% else %}
+        <p class="fs-5 pt-4 text-white">You are not logged in</p>
+        {% endif %}
       </div>
     </nav>
 
@@ -165,9 +163,9 @@
         </p>
       </div>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/bb021deaf1.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
-  <script
-    src="https://kit.fontawesome.com/bb021deaf1.js"
-    crossorigin="anonymous"
-  ></script>
 </html>
