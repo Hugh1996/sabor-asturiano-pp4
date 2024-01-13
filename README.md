@@ -318,22 +318,41 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 ## Deployment
 
-### Heroku Deployment
+#### Fork
 
-- Heroku App Creation
+To fork the reopsitory, follow these steps:
 
-  - Log in to the Heroku dashboard.
-  - Create a new app from the dashboard.
+- Log into your [Github](https://github.com/).
+- Navigate to [SaborAsturiano](https://github.com/Hugh1996/sabor-asturiano-pp4).
+- Click on the Fork button/ It is located on the top right 
+- The process will begin and a confirmation message should appear.
 
+#### Clone
+
+For local development, you aan clone the repository by following these steps:
+
+- Log into your [Github](https://github.com/).
+- Navigate to [SaborAsturiano](https://github.com/Hugh1996/sabor-asturiano-pp4).
+- Directly above the files on the top right, click  the green 'Code' button.
+- Copy the URL.
+- In your preferred IDE, open a terminal session in the directory you want to clone the repository to.
+- Type 'git clone' and paste the copied URL.
+- Set up a virtual environment (not required if you are using the Code Institute template and GitPod or Codeanywhere - this will be already set up).
+- Press Enter to create the clone.
+- Install packages by running command pip3 install -r requirements.txt
+
+#### Heroku 
+
+- Log in to the Heroku dashboard.
+- Create a new app from the dashboard.
 - Connect GitHub Repository
+- In the Heroku app dashboard, navigate to the Deploy tab.
+- Connect your GitHub repository to the Heroku app.
 
-  - In the Heroku app dashboard, navigate to the Deploy tab.
-  - Connect your GitHub repository to the Heroku app.
+#### Environment Variables
 
-- Set Environment Variables
-
-  - In the Settings tab, locate the Config Vars section.
-  - Add the following environment variables:
+- In the Settings tab, locate the Config Vars section.
+- Add the following environment variables:
     - DJANGO_SECRET_KEY: Your Django project secret key.
     - DATABASE_URL: Your database connection URL.
     - Add any other necessary environment variables.
