@@ -339,7 +339,9 @@ The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) service was used t
 
 #### Python
 
-- blog app
+All below py files were passed through the [CI Python Linter](https://pep8ci.herokuapp.com/). No errors were found. 
+
+blog app
 
   - admin.py
   - forms.py
@@ -347,10 +349,24 @@ The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) service was used t
   - urls.py
   - views.py
 
-- saborasturiano
+saborasturiano
 
-  - settings.py
-  - urls.py
+<details>
+<summary></summary>
+</details>
+
+<details>
+<summary>settings.py</summary>
+
+![settings.py](/static/images/)
+</details>
+
+<details>
+<summary>url.py</summary>
+
+![url.py](https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/urlsabor_o7orbg.jpg)
+</details>
+
 
 #### JavaScript
 
