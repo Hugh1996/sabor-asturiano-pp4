@@ -210,18 +210,43 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 ![Button Disappears](/static/images/readme/disappear.jpg)
 
+#### Navbar
+
 - Users are notified of their login status on the top right of the navigation bar.
 - Additional features for adding a recipe or accessing the profile appear.
 
 ![Navbar](/static/images/readme/userin.jpg)
 
+#### About
+
 - The about section contains the main deccription, vision and expectations for the application. It also informs the user of the benefits of creating an account.
 
 ![About](/static/images/readme/about.jpg)
 
+#### Footer
+
 - The footer contains copyright informatoio and the creators name. It also contains social links to the creators Github and LinkedIn profiles. 
 
 ![Footer](/static/images/readme/footer.jpg)
+
+#### Register
+
+- Users can sign up by entering a username and password, along with a password confirmation. An email field is also optional. Upon successful registration, users will be automatically logged in and directed to the home page.
+
+![Register](/static/images/readme/register.jpg)
+
+#### Login
+
+- After successfully signing up for the application, users can securely log into their accounts by entering their username and associated password.
+- The navbar will display a logged-in status for users who have successfully signed in.
+
+![Login](/static/images/readme/login.jpg)
+
+#### Logout
+
+- To log out, users can simply click on the logout button, which will then redirect them to a confirmation page where they can confirm their intention to log out.
+
+![Logout](/static/images/readme/logout.jpg)
 
 ### Features Left to Implement
 
