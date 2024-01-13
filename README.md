@@ -46,11 +46,12 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
   - [Python](#python)
   - [JavaScript](#javascript)
 
-### [Bugs](#bugs)
-
 ### [Deployment](#deployment)
 
-- [Heroku Deployment](#heroku-deployment)
+- [Fork](#fork)
+- [Clone](#clone)
+- [Heroku](#heroku)
+- [Environment Variables](#environment-variables)
 
 ### [Techologies Used](#techologies-used)
 
@@ -319,10 +320,8 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 #### User Profile Visibility
 
 - An upcoming feature on our platform will allow users to view profiles of fellow users, fostering a sense of community within the culinary space. This feature is designed to promote interaction and engagement among users, providing an opportunity to explore and connect with each other through shared interests in cooking and recipes. Stay tuned for this exciting addition, as we aim to create a vibrant and collaborative community within our platform.
-  
-## Testing
 
-### Manual Testing
+## Testing
 
 ### General Testing
 
@@ -339,8 +338,6 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 #### Python
 
 #### JavaScript
-
-## Bugs
 
 ## Deployment
 
