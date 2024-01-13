@@ -1,33 +1,54 @@
 <!-- Template for a users about page -->
 
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
 
-{% block content %}
-
-<div class="container log-in mt-4 d-flex justify-content-center align-items-center">
-    <div class="row">
-        <h3 class="text-center mt-3 fw-bold fs-3">User Profile</h3>
-        <div class="col-md-8 mt-3 offset-md-2 text-justify">
-            {% if user_profile.profile_picture.url %}
-                <img src="{{ user_profile.profile_picture }}" class="rounded-circle img-fluid mx-auto d-block" alt="Profile Picture">
-            {% else %}
-                <img src="/media/placeholders/profile.jpg" class="rounded-circle img-fluid mx-auto d-block" alt="Profile Picture">
-            {% endif %}
-            <p class="mt-3 fs-5"><strong>Name:</strong> {{ user_profile.user.username }}</p>
-            <p class="mt-3 fs-5"><strong>About:</strong> {{ user_profile.bio }}</p>
-            <div class="text-center">
-                <a href="{% url 'edit_profile' %}" class="btn btn-warning right mt-4 mb-1">Edit Profile</a>
-                <form class="d-inline" method="post" action="{% url 'delete_profile' %}">
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-danger mt-4 ml-2">Delete Profile</button>
-                </form>
-            </div>
-            <div class="text-center">
-                <a href="{% url 'home' %}" class="btn btn-signup right mt-5 mb-5">Return to Home</a>
-            </div>
-        </div>
+<div
+  class="container log-in mt-4 d-flex justify-content-center align-items-center"
+>
+  <div class="row">
+    <h3 class="text-center mt-3 fw-bold fs-3">User Profile</h3>
+    <div class="col-md-8 mt-3 offset-md-2 text-justify">
+      {% if user_profile.profile_picture.url %}
+      <img
+        src="{{ user_profile.profile_picture }}"
+        class="rounded-circle img-fluid mx-auto d-block"
+        alt="Profile Picture"
+      />
+      {% else %}
+      <img
+        src="/media/placeholders/profile.jpg"
+        class="rounded-circle img-fluid mx-auto d-block"
+        alt="Profile Picture"
+      />
+      {% endif %}
+      <p class="mt-3 fs-5">
+        <strong>Name:</strong> {{ user_profile.user.username }}
+      </p>
+      <p class="mt-3 fs-5"><strong>About:</strong> {{ user_profile.bio }}</p>
+      <div class="text-center">
+        <a
+          href="{% url 'edit_profile' %}"
+          class="btn btn-success right mt-4 mb-1"
+          >Edit Profile</a
+        >
+        <form
+          class="d-inline"
+          method="post"
+          action="{% url 'delete_profile' %}"
+        >
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger mt-4 ml-2">
+            Delete Profile
+          </button>
+        </form>
+      </div>
+      <div class="text-center">
+        <a href="{% url 'home' %}" class="btn btn-signup right mt-5 mb-5"
+          >Return to Home</a
+        >
+      </div>
     </div>
+  </div>
 </div>
 
 {%endblock%}
-

@@ -233,24 +233,6 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 ![Footer](/static/images/readme/footer.jpg)
 
-#### Recipes
-
-- Users have the ability to browse a list of recipes, each accompanied by an image and a brief excerpt that highlights the essence of the recipe.
-- The author's name is prominently displayed, and users can also see the like and review counts, providing insights into the popularity of each recipe.
-
-![Recipes](/static/images/readme/recipes.jpg)
-
-- Upon selecting a recipe for viewing, users will be presented with a detailed page featuring a clear image of the recipe. The page includes a comprehensive list of ingredients and step-by-step instructions for users to try the recipe at home.
-- Additionally, users can see the number of likes and reviews for the recipe, and they have the option to view the reviews themselves. If logged in, users can interact with the recipe by liking it or adding their own review, enhancing the overall user engagement with the platform.
-
-![RecipeDetail](/static/images/readme/recipedetail.jpg)
-![RecipeDetail2](/static/images/readme/recipedetail2.jpg)
-![Reviews](/static/images/readme/review.jpg)
-
-- Upon successfully adding a review, users will receive a notification confirming the successful addition and expressing gratitude for their feedback. Furthermore, users will have the option to both edit and delete their reviews, providing them with control and flexibility over their contributions.
-
-![Reviews](/static/images/readme/reviewfeedback.jpg)
-
 #### Register
 
 - Users can sign up by entering a username and password, along with a password confirmation. An email field is also optional. Upon successful registration, users will be automatically logged in and directed to the home page.
@@ -271,6 +253,44 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 - To log out, users can simply click on the logout button, which will then redirect them to a confirmation page where they can confirm their intention to log out.
 
 ![Logout](/static/images/readme/logout.jpg)
+
+#### Recipes
+
+- Users have the ability to browse a list of recipes, each accompanied by an image and a brief excerpt that highlights the essence of the recipe.
+- The author's name is prominently displayed, and users can also see the like and review counts, providing insights into the popularity of each recipe.
+
+![Recipes](/static/images/readme/recipes.jpg)
+
+- Upon selecting a recipe for viewing, users will be presented with a detailed page featuring a clear image of the recipe. The page includes a comprehensive list of ingredients and step-by-step instructions for users to try the recipe at home.
+- Additionally, users can see the number of likes and reviews for the recipe, and they have the option to view the reviews themselves. If logged in, users can interact with the recipe by liking it or adding their own review, enhancing the overall user engagement with the platform.
+
+![RecipeDetail](/static/images/readme/recipedetail.jpg)
+![RecipeDetail2](/static/images/readme/recipedetail2.jpg)
+![Reviews](/static/images/readme/review.jpg)
+
+- Upon successfully adding a review, users will receive a notification confirming the successful addition and expressing gratitude for their feedback. Furthermore, users will have the option to both edit and delete their reviews, providing them with control and flexibility over their contributions.
+
+![Reviews](/static/images/readme/reviewfeedback.jpg)
+
+- For logged-in users, the platform offers the capability to contribute by adding their own recipes. These submissions are sent to the admin site as drafts for review and approval.
+- When submitting a recipe, users must provide a title, a brief description, list of ingredients, and step-by-step instructions.
+- Additionally, users have the option to upload an image of the recipe. In cases where the user does not provide their own image, a placeholder image will automatically be assigned to the recipe.
+
+![Add Recipe](/static/images/readme/addrecipe.jpg)
+![Add Recipe](/static/images/readme/addrecipe2.jpg)
+
+- After a user submits a recipe, a confirmation message will appear, notifying them that the recipe has been successfully submitted and is now pending approval. This provides users with clear feedback on the status of their contribution to the platform.
+  
+![Add Recipe](/static/images/readme/recipesubmit.jpg)
+
+- When a user is logged in, they can click on the profile icon to view their profile picture or bio. Their username will alrwady be displayed. A placeholder photo will automatically be displayed if the user has not uploaded a photo, and the bio section will be blank until the user adds their own information. This ensures a consistent and user-friendly experience within the profile section.
+
+![User Profile](/static/images/readme/userprofile.jpg)
+
+- Users have the ability to edit their bio by clicking the edit button in the profile section.
+- Alternatively, they can choose to delete their profile details. Upon deletion, the profile will be wiped clean, leaving only the username intact. This empowers users to manage and customize their profile information according to their preferences.
+
+![Edit Profile](/static/images/readme/editprofile.jpg)
 
 ### Features Left to Implement
 
