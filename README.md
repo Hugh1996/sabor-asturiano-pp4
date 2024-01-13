@@ -246,8 +246,6 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 ![Login](/static/images/readme/login.jpg)
 
-![Add Recipe](/static/images/readme/addrecipe.jpg)
-
 #### Logout
 
 - To log out, users can simply click on the logout button, which will then redirect them to a confirmation page where they can confirm their intention to log out.
@@ -284,7 +282,7 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 ![Add Recipe](/static/images/readme/addrecipe2.jpg)
 
 - After a user submits a recipe, a confirmation message will appear, notifying them that the recipe has been successfully submitted and is now pending approval. This provides users with clear feedback on the status of their contribution to the platform.
-  
+
 ![Add Recipe](/static/images/readme/recipesubmit.jpg)
 
 #### User Profile
@@ -303,13 +301,25 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 - The Django built-in administrator panel provides comprehensive control over the website.
 - Within the admin panel, admins can approve, update, and delete recipes, enabling effective content management.
 - The admin an manage reviews.
-- Further management is implemented in the control of user account. 
+- Further management is implemented in the control of user account.
 - Both of the above implement CRUD functionality.
 
 ![Admin](/static/images/readme/admin.jpg)
 
 ### Features Left to Implement
 
+#### User Favourites
+
+- Users on our platform will soon enjoy the ability to curate a personalized list of their favorite recipes. This feature is designed to offer a seamless and convenient way to access and revisit the dishes they love. With quick retrieval in mind, users can effortlessly manage and revisit their curated list for an enhanced culinary experience.
+
+#### Search Functionality
+
+- A user-friendly search functionality will be introduced, allowing users to effortlessly discover new recipes or locate specific dishes they have in mind. This feature aims to enhance the overall user experience by making recipe exploration convenient and enjoyable.
+
+#### User Profile Visibility
+
+- An upcoming feature on our platform will allow users to view profiles of fellow users, fostering a sense of community within the culinary space. This feature is designed to promote interaction and engagement among users, providing an opportunity to explore and connect with each other through shared interests in cooking and recipes. Stay tuned for this exciting addition, as we aim to create a vibrant and collaborative community within our platform.
+  
 ## Testing
 
 ### Manual Testing
@@ -340,7 +350,7 @@ To fork the reopsitory, follow these steps:
 
 - Log into your [Github](https://github.com/).
 - Navigate to [SaborAsturiano](https://github.com/Hugh1996/sabor-asturiano-pp4).
-- Click on the Fork button/ It is located on the top right 
+- Click on the Fork button/ It is located on the top right
 - The process will begin and a confirmation message should appear.
 
 #### Clone
@@ -349,7 +359,7 @@ For local development, you aan clone the repository by following these steps:
 
 - Log into your [Github](https://github.com/).
 - Navigate to [SaborAsturiano](https://github.com/Hugh1996/sabor-asturiano-pp4).
-- Directly above the files on the top right, click  the green 'Code' button.
+- Directly above the files on the top right, click the green 'Code' button.
 - Copy the URL.
 - In your preferred IDE, open a terminal session in the directory you want to clone the repository to.
 - Type 'git clone' and paste the copied URL.
@@ -357,7 +367,7 @@ For local development, you aan clone the repository by following these steps:
 - Press Enter to create the clone.
 - Install packages by running command pip3 install -r requirements.txt
 
-#### Heroku 
+#### Heroku
 
 - Log in to the Heroku dashboard.
 - Create a new app from the dashboard.
@@ -369,9 +379,10 @@ For local development, you aan clone the repository by following these steps:
 
 - In the Settings tab, locate the Config Vars section.
 - Add the following environment variables:
-    - DJANGO_SECRET_KEY: Your Django project secret key.
-    - DATABASE_URL: Your database connection URL.
-    - Add any other necessary environment variables.
+
+  - DJANGO_SECRET_KEY: Your Django project secret key.
+  - DATABASE_URL: Your database connection URL.
+  - Add any other necessary environment variables.
 
 - Enable Automatic Deploys
 
@@ -406,7 +417,7 @@ This section outlines the various technologies used throughout the project and t
 - [Github](https://github.com/) - Used to create application repository and utilize agile functionaility.
 - [Codeanywhere](https://app.codeanywhere.com/) - Coding environment.
 - [Heroku](https://id.heroku.com/login) - Cloud based platform to deploy site.
-- [Canva](https://www.canva.com/) - Used to create images.
+- [Canva](https://www.canva.com/) - Image usage.
 - [Google Fonts](https://fonts.google.com/) - Used for the typography.
 - [Am I Responsive](https://ui.dev/amiresponsive) - Used to test responsiveness on all screen sizes.
 - [W3C Validator](https://validator.w3.org/) - Used to validatr HTML.
