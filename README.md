@@ -36,10 +36,10 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 ### [Testing](#testing)
 
 - [General Testing](#general-testing)
-- [Manual Testing](#manual-testing)
 - [General Testing](#general-testing)
 - [Lighthouse](#lighthouse)
 - [Code Validation](#code-validation)
+- [Features Testing](#features-testing)
 
   - [HTML](#html)
   - [CSS](#css)
@@ -326,9 +326,14 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 ### General Testing
 
 - The deployed website underwent rigorous testing across diverse screen sizes utilizing tools such as [Am I Responsive](https://ui.dev/amiresponsive) and Developer Tools.
+
+![Am I Responsive?](/static/images/readme/responsive.jpg)
+
 - A comprehensive array of devices, including the iPhone 13, Samsung Galaxy S20, Toshiba Laptop, and Dell Desktop, were employed to verify the website's responsiveness.
 - Furthermore, extensive browser compatibility testing was conducted on Google Chrome and Microsoft Edge to ensure optimal performance across different platforms.
 - To ensure aesthetic coherence, feedback was sought from friends and family who confirmed the harmony of the site's color scheme and font style. Their input also confirmed that the website is user-friendly and easy to navigate.
+
+
 
 ### Lighthouse Testing
 
@@ -394,10 +399,6 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 ![Edit Profile](https://res.cloudinary.com/duktk6qg0/image/upload/v1705232333/lighthouseedit_pi7meq.jpg)
 
 </details>
-
-### General Testing
-
-![Am I Responsive?](/static/images/readme/responsive.jpg)
 
 ### Code Validation
 
@@ -485,11 +486,105 @@ The [JSHint JavaScript Validator](https://jshint.com/) service was used to valid
 
 </details>
 
+#### Features Testing
+
+#### Home Page
+
+All below actions function as expected.
+
+- Click website heading to redirect to Home Page.
+- Click 'Home' on the navigation bar to redirect to Home Page.
+- Click 'Recipes' on the navigation bar to redirect to Recipes Page.
+- Click 'Register' on the navigation bar to redirect to Sign Up Page.
+- Click 'Login' on the navigation bar to redirect to Login Page.
+- Sign Up now button on background image also redirects to Sign Up Page.
+- Click on Github icon in the footer to redirect to Github.
+- Click on LinkedIn icon in the footer to redirect to LinkedIn.
+- The user is notified of their logged in status in the navigation bar.
+
+#### Home Page (Logged In)
+
+All below actions function as expected.
+
+- After Login/Sign Up the Sign Up now button is not visible.
+- After Login/Sign Up the navigation bar changes. An Add Recipe, Logout and Profile option is available.
+- The user is notified of their logged in status in the navigation bar.
+
+#### Sign Up Page
+
+All below actions function as expected.
+
+- Enter invalid email format. Form will not submit.
+- Email is optional.
+- Enter invalid passoword Error will inform user incorrect.
+- Type valid password. Form will submit.
+- Type different password for cpassword confirmation. Form will not submit.
+- Enter valid details. Form will submit and direct to Home Page. Account is created.
+  
+#### Login Page
+
+All below actions function as expected.
+
+- Enter valid details. Form will submit and direct to Home Page. User is logged in.
+- Enter invalid password or username. Form will not submit.
+
+#### Logout Page
+
+All below actions function as expected.
+
+- Click Logout to redirect to Logout Page
+- Confirm sign out. Reidirect to Home Page. User is logged out.
+
+#### Recipe Page 
+
+All below actions function as expected.
+
+- Click on recipe card. Redirects to Recipe Detail.
+- Click on Next button. Redirect to next page.
+- Click on Prev button. Redirect to previous page.
+
+#### Recipe Detail Page
+
+All below actions function as expected.
+
+- All recipe details are provided.
+- Can view number of likes and reviews.
+- Can view the reviews.
+
+#### Recipe Detail Page (Logged In User)
+
+All below actions function as expected.
+
+- All recipe details are provided.
+- Can view number of likes and reviews.
+- Can view reviews.
+- Can like recipe.
+- Can review recipe.
+- Can edit and delete reviews.
+
+#### Add Recipe Page
+
+All below actions function as expected.
+
+- Can submit own recipe for approval.
+
+#### User Profile Page
+
+All below actions function as expected.
+
+- Can input, edit, create or delete bio.
+
+#### Admin Panel
+
+All below actions function as expected.
+
+- Can manage recipes (CRUD)
+- Can manage review (CRUD).
+- Can manage user accounts.
+
 ### Bugs
 
 #### Fixed bugs
-
-##### Responsive Testing
 
 - I encountered difficulty testing responsiveness on Am I Responsive due to the X_FRAME_OPTIONS setting in my Django project's settings.py file. Initially, it was set to 'SAMEORIGIN' which restricted testing.
 - To address this, I first removed the setting from my settings.py file, allowing Django to use its default. However, this defaulted to 'DENY', which was inaccurate.
