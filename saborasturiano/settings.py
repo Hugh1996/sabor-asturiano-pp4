@@ -30,6 +30,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+X_FRAME_OPTIONS = 'ALLOWALL'
+
 ALLOWED_HOSTS = ['sabor-asturiano-cd988cf2702b.herokuapp.com',
                  '8000-hugh1996-sabor-asturiano-p6ggop7436.us2.codeanyapp.com',
                  '8000-hugh1996-sabor-asturiano-cb0z1xomeb.us2.codeanyapp.com',
