@@ -325,6 +325,11 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 ### General Testing
 
+- The deployed website underwent rigorous testing across diverse screen sizes utilizing tools such as [Am I Responsive](https://ui.dev/amiresponsive) and Developer Tools.
+- A comprehensive array of devices, including the iPhone 13, Samsung Galaxy S20, Toshiba Laptop, and Dell Desktop, were employed to verify the website's responsiveness.
+- Furthermore, extensive browser compatibility testing was conducted on Google Chrome and Microsoft Edge to ensure optimal performance across different platforms.
+- To ensure aesthetic coherence, feedback was sought from friends and family who confirmed the harmony of the site's color scheme and font style. Their input also confirmed that the website is user-friendly and easy to navigate.
+
 ### Lighthouse Testing
 
 <details>
@@ -351,6 +356,7 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 <details>
 <summary>Register</summary>
 
+![Register](https://res.cloudinary.com/duktk6qg0/image/upload/v1705248875/lighthousesignup_ewnow1.jpg)
 </details>
 
 <details>
@@ -396,12 +402,12 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 #### HTML
 
-The [W3C Markup Validator](https://validator.w3.org/) service was used to validate to ensure no errors occurred.
+The [W3C Markup Validator](https://validator.w3.org/) service was used to validate HTML.
 
 - [Home](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsabor-asturiano-cd988cf2702b.herokuapp.com%2F)
-- [Recipes]
-- [Recipes Detail]
-- [Register]
+- [Recipes](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsabor-asturiano-cd988cf2702b.herokuapp.com%2Frecipes%2F)
+- [Recipes Detail](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsabor-asturiano-cd988cf2702b.herokuapp.com%2Frecipe%2Ffabada-asturiana%2F)
+- [Register](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsabor-asturiano-cd988cf2702b.herokuapp.com%2Faccounts%2Fsignup%2F)
 - [Login](https://sabor-asturiano-cd988cf2702b.herokuapp.com/accounts/login/)
 - [Logout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsabor-asturiano-cd988cf2702b.herokuapp.com%2Faccounts%2Flogout%2F)
 - [Add Recipe](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsabor-asturiano-cd988cf2702b.herokuapp.com%2Fadd_recipe%2F)
