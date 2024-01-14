@@ -4,7 +4,7 @@ SaborAsturiano (AsturianTastes) is a website dedicated to Asturian cuisine, offe
 
 It caters to a community of Asturian food enthusiasts, providing a platform for exploration, reviews, and contributions. The website's purpose is to bring together individuals passionate about Asturian flavors, fostering a sense of community and sharing among those interested in the region's diverse culinary traditions.
 
-![Am I Responsive?]()
+![Am I Responsive?](/static/images/readme/responsive.jpg)
 
 ## Table of Contents
 
@@ -35,7 +35,7 @@ It caters to a community of Asturian food enthusiasts, providing a platform for 
 
 ### [Testing](#testing)
 
-- [Responsiveness Testing](#responsiveness-testing)
+- [General Testing](#general-testing)
 - [Manual Testing](#manual-testing)
 - [General Testing](#general-testing)
 - [Lighthouse](#lighthouse)
@@ -388,7 +388,9 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 </details>
 
-### Responsiveness Testing
+### General Testing
+
+![Am I Responsive?](/static/images/readme/responsive.jpg)
 
 ### Code Validation
 
@@ -529,6 +531,8 @@ For local development, you aan clone the repository by following these steps:
 - Open the App
 
   - Once the deployment is successful, click the "Open App" button to view your deployed app.
+
+View the live website here - [SaborAsturiano](https://sabor-asturiano-cd988cf2702b.herokuapp.com/)
 
 ## Techologies Used
 
