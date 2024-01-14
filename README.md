@@ -333,8 +333,6 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 - Furthermore, extensive browser compatibility testing was conducted on Google Chrome and Microsoft Edge to ensure optimal performance across different platforms.
 - To ensure aesthetic coherence, feedback was sought from friends and family who confirmed the harmony of the site's color scheme and font style. Their input also confirmed that the website is user-friendly and easy to navigate.
 
-
-
 ### Lighthouse Testing
 
 <details>
@@ -520,7 +518,7 @@ All below actions function as expected.
 - Type valid password. Form will submit.
 - Type different password for cpassword confirmation. Form will not submit.
 - Enter valid details. Form will submit and direct to Home Page. Account is created.
-  
+
 #### Login Page
 
 All below actions function as expected.
@@ -535,7 +533,7 @@ All below actions function as expected.
 - Click Logout to redirect to Logout Page
 - Confirm sign out. Reidirect to Home Page. User is logged out.
 
-#### Recipe Page 
+#### Recipe Page
 
 All below actions function as expected.
 
@@ -599,6 +597,10 @@ All below actions function as expected.
 - I faced an issue with the password validation on my signup page, which seemed to be connected to the shortening of AUTH_PASSWORD_VALIDATORS in my settings.py file. The modification was initially made to adhere to PEP8 guidelines. However, upon restoring the lines to their original length, the password validation started working as expected.
 
 #### Unfixed bugs
+
+#### User Profile Image
+
+- User profile placeholder image or uploaded user image not appearing.
 
 ## Deployment
 
