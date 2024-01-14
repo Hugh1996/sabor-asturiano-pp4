@@ -495,11 +495,11 @@ The [JSHint JavaScript Validator](https://jshint.com/) service was used to valid
 - To address this, I first removed the setting from my settings.py file, allowing Django to use its default. However, this defaulted to 'DENY', which was inaccurate.
 - To resolve the issue and enable testing on Am I Responsive, I adjusted X_FRAME_OPTIONS to 'ALLOWALL'. This modification allowed me to successfully test the responsiveness of my site.
 
-#### Error 500 
+##### Error 500
 
 - I encountered a 500 error while attempting to load my signup page, I identified the issue to be related to the version of django-allauth installed. The error was prevalent with version 0.57.0. To resolve this, I downgraded to version 0.54.0 and updated my requirements.txt accordingly. This alleviated the error, and my signup page is now functioning as expected.
 
-#### Password Validation
+##### Password Validation
 
 - I faced an issue with the password validation on my signup page, which seemed to be connected to the shortening of AUTH_PASSWORD_VALIDATORS in my settings.py file. The modification was initially made to adhere to PEP8 guidelines. However, upon restoring the lines to their original length, the password validation started working as expected.
 
