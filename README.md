@@ -357,6 +357,7 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 <summary>Register</summary>
 
 ![Register](https://res.cloudinary.com/duktk6qg0/image/upload/v1705248875/lighthousesignup_ewnow1.jpg)
+
 </details>
 
 <details>
@@ -484,6 +485,26 @@ The [JSHint JavaScript Validator](https://jshint.com/) service was used to valid
 
 </details>
 
+### Bugs
+
+#### Fixed bugs
+
+##### Responsive Testing
+
+- I encountered difficulty testing responsiveness on Am I Responsive due to the X_FRAME_OPTIONS setting in my Django project's settings.py file. Initially, it was set to 'SAMEORIGIN' which restricted testing.
+- To address this, I first removed the setting from my settings.py file, allowing Django to use its default. However, this defaulted to 'DENY', which was inaccurate.
+- To resolve the issue and enable testing on Am I Responsive, I adjusted X_FRAME_OPTIONS to 'ALLOWALL'. This modification allowed me to successfully test the responsiveness of my site.
+
+#### Error 500 
+
+- I encountered a 500 error while attempting to load my signup page, I identified the issue to be related to the version of django-allauth installed. The error was prevalent with version 0.57.0. To resolve this, I downgraded to version 0.54.0 and updated my requirements.txt accordingly. This alleviated the error, and my signup page is now functioning as expected.
+
+#### Password Validation
+
+- I faced an issue with the password validation on my signup page, which seemed to be connected to the shortening of AUTH_PASSWORD_VALIDATORS in my settings.py file. The modification was initially made to adhere to PEP8 guidelines. However, upon restoring the lines to their original length, the password validation started working as expected.
+
+#### Unfixed bugs
+
 ## Deployment
 
 #### Fork
@@ -578,14 +599,14 @@ This section outlines the various technologies used throughout the project and t
 
 ### Content
 
-- The Recipe and Comment models were implemented with guidance from the I Think There I Blog walkthrough, for which credit is duly given.
+- The Recipe and Review models were implemented with guidance from the I Think There I Blog walkthrough, for which credit is duly given.
 - The starter templates for base.html, index.html, and recipe_detail.html were sourced from the same walkthrough and have been adapted for our project.
 - The style.css file, credited to the I Think There I Blog walkthrough, has been used with amendments as required to suit our project needs.
-- Credit goes to www.directoalpaladar.com for providing the recipe ingredients and intructions uploaded.
+- Credit goes to www.directoalpaladar.com, www.bonviveur.es, lacocinadefrabisa.lavozdegalicia.es and www.recetinas.com for providing the recipe ingredients and intructions uploaded.
 
 ### Media
 
 - Credit to www.uplabs.com for the recipes placeholder image.
-- Credit to www.directoalpaladar.com for providing images for uploaded recipes.
+- Credit to www.directoalpaladar.com, www.bonviveur.es, lacocinadefrabisa.lavozdegalicia.es and www.recetinas.com for providing for recipe images.
 - Credit to www.canava.com for all images used on the Home page.
 - Credit to www.icons8.com for use of the favicon.
