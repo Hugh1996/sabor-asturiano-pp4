@@ -327,6 +327,59 @@ Roboto is the primary font for the site, providing versatility and modernity wit
 
 ### Lighthouse Testing
 
+<details>
+<summary>Home</summary>
+
+![Home](https://res.cloudinary.com/duktk6qg0/image/upload/v1705232333/lighthousehome_wzjddz.jpg)
+</details>
+
+<details>
+<summary>Recipes</summary>
+
+![Recipes](https://res.cloudinary.com/duktk6qg0/image/upload/v1705232333/lighthouserecipes_wo8w2d.jpg)
+</details>
+
+<details>
+<summary>Recipes Detail</summary>
+
+![Recipe Detail](https://res.cloudinary.com/duktk6qg0/image/upload/v1705232333/lighthousedetail_zeb1qf.jpg)
+</details>
+
+<details>
+<summary>Register</summary>
+
+</details>
+
+<details>
+<summary>Login</summary>
+
+![Login](https://res.cloudinary.com/duktk6qg0/image/upload/v1705233085/lighthouselogin_epgkys.jpg)
+</details>
+
+<details>
+<summary>Logout</summary>
+
+![Logout](https://res.cloudinary.com/duktk6qg0/image/upload/v1705232333/lighthouselogout_c8gzx0.jpg)
+</details>
+
+<details>
+<summary>Add Recipe</summary>
+
+![Add Recipe](https://res.cloudinary.com/duktk6qg0/image/upload/v1705232333/lighthouseadd_gpss6j.jpg)
+</details>
+
+<details>
+<summary>User Profile</summary>
+
+![User Profile](https://res.cloudinary.com/duktk6qg0/image/upload/v1705232333/lighthouseprofile_dnqzg6.jpg)
+</details>
+
+<details>
+<summary>Edit Profile</summary>
+
+![Edit Profile](https://res.cloudinary.com/duktk6qg0/image/upload/v1705232333/lighthouseedit_pi7meq.jpg)
+</details>
+
 ### Responsiveness Testing
 
 ### Code Validation
@@ -386,7 +439,7 @@ All below py files were passed through the [CI Python Linter](https://pep8ci.her
 <details>
 <summary>views.py</summary>
 
-![views.py](!<https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/viewblog_lbkrxn.jpg)>
+![views.py](https://res.cloudinary.com/duktk6qg0/image/upload/v1705182314/viewblog_lbkrxn.jpg)
 
 </details>
 
